@@ -1,0 +1,42 @@
+# Build and compiled files
+build/
+**/build/
+onnx_detector
+
+# ONNX Runtime
+onnxruntime-linux-x64-1.21.0/
+
+# Python-related
+__pycache__/
+
+# Debug files and logs
+debug_output.log
+debug_circles/
+*.log
+
+# IDE related
+.vscode/
+# Misc
+.specstory/ 
+
+# Large media files
+*.avi
+*.mp4
+*.m4v
+*.mov
+*.mkv
+*.zip
+*.tar.gz
+Tracking3D_1.zip
+Chess 8mm
+Chess 8mm1
+Combined
+
+# Temporary files
+check_repo.sh
+
+# Model and data files - include in the repo only if needed
+# Comment these out if you want to include them
+# *.onnx
+# *.pt
+
