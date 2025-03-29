@@ -1,0 +1,46 @@
+cmake_minimum_required(VERSION 3.10)
+project(GolfBallDetector)
+
+# Find required packages
+find_package(OpenCV REQUIRED)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# ONNX Runtime paths - these can be overridden from command line
+if(NOT DEFINED ONNXRUNTIME_DIR)
+    set(ONNXRUNTIME_DIR "C:/onnxruntime") # Default path, can be overridden
+endif()
+
+set(ONNXRUNTIME_INCLUDE_DIRS "${ONNXRUNTIME_DIR}/include")
+set(ONNXRUNTIME_LIB_DIR "${ONNXRUNTIME_DIR}/lib")
+
+# Include directories
+include_directories(${OpenCV_INCLUDE_DIRS} ${ONNXRUNTIME_INCLUDE_DIRS})
+
+# Add executables
+add_executable(onnx_detector onnx_detector.cpp)
+
+# Link libraries - Windows uses .lib files
+target_link_libraries(onnx_detector 
+    ${OpenCV_LIBS} 
+    ${ONNXRUNTIME_LIB_DIR}/onnxruntime.lib
+)
+
+# Copy DLLs to output directory for Windows
+add_custom_command(TARGET onnx_detector POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${ONNXRUNTIME_DIR}/bin/onnxruntime.dll"
+        $<TARGET_FILE_DIR:onnx_detector>
+)
+
+# Print configuration information during cmake
+message(STATUS "OpenCV version: ${OpenCV_VERSION}")
+message(STATUS "OpenCV include dirs: ${OpenCV_INCLUDE_DIRS}")
+message(STATUS "OpenCV libraries: ${OpenCV_LIBS}")
+message(STATUS "ONNX Runtime include dirs: ${ONNXRUNTIME_INCLUDE_DIRS}")
+message(STATUS "ONNX Runtime library dir: ${ONNXRUNTIME_LIB_DIR}")
+
+# Install target
+install(TARGETS onnx_detector DESTINATION bin) 
