@@ -13,8 +13,11 @@ set(ONNXRUNTIME_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../onnxruntime-linux-x64-1.21.0
 set(ONNXRUNTIME_INCLUDE_DIRS "${ONNXRUNTIME_DIR}/include")
 set(ONNXRUNTIME_LIB_DIR "${ONNXRUNTIME_DIR}/lib")
 
+# Normalize paths
+file(TO_CMAKE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../calibration" CALIBRATION_DIR)
+file(TO_CMAKE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../detector" DETECTOR_DIR)
+
 # Calibration library path
-set(CALIBRATION_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../calibration")
 set(CALIBRATION_INCLUDE_DIRS "${CALIBRATION_DIR}/include")
 set(CALIBRATION_LIB_DIR "${CMAKE_BINARY_DIR}/../calibration/build")
 
@@ -28,9 +31,9 @@ if(NOT TARGET calibration)
     endif()
 endif()
 
-# Detector library path
-set(DETECTOR_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../detector")
+# Detector paths - only needed for simple_onnx_detector
 set(DETECTOR_INCLUDE_DIRS "${DETECTOR_DIR}/include")
+set(DETECTOR_SRC_DIR "${DETECTOR_DIR}/src")
 
 include_directories(
     ${OpenCV_INCLUDE_DIRS} 
@@ -40,47 +43,30 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/../common/include
 )
 
-# Add executables
-add_executable(detection_test_app detection_test_app.cpp)
-add_executable(enhanced_detector_main enhanced_detector_main.cpp)
-add_executable(preprocessor_main preprocessor_main.cpp)
-add_executable(test_calibration_image ../test/src/test_calibration_image.cpp)
+# Add detection_test_app executable
+add_executable(detection_test_app 
+    detection_test_app.cpp
+)
 
-# Link libraries
+# Link libraries directly
 target_link_libraries(detection_test_app 
-    detector
     ${OpenCV_LIBS} 
-    ${ONNXRUNTIME_LIB_DIR}/libonnxruntime.so
-    calibration
+    onnxruntime
+    simple_onnx_detector_lib
 )
 
-target_link_libraries(enhanced_detector_main 
-    detector
-    ${OpenCV_LIBS} 
-    ${ONNXRUNTIME_LIB_DIR}/libonnxruntime.so
-)
+# Add calibration library if it exists
+if(CALIBRATION_LIB)
+    target_link_libraries(detection_test_app ${CALIBRATION_LIB})
+endif()
 
-target_link_libraries(preprocessor_main 
-    detector
-    ${OpenCV_LIBS}
-)
-
-target_link_libraries(test_calibration_image
-    detector
-    ${OpenCV_LIBS}
-    calibration
-)
-
-# Set RPATH for the executables
-set_target_properties(detection_test_app PROPERTIES
-    INSTALL_RPATH "${ONNXRUNTIME_LIB_DIR}"
-    BUILD_WITH_INSTALL_RPATH TRUE
-)
-
-set_target_properties(enhanced_detector_main PROPERTIES
-    INSTALL_RPATH "${ONNXRUNTIME_LIB_DIR}"
-    BUILD_WITH_INSTALL_RPATH TRUE
-)
+# Set RPATH for the executable (Linux only)
+if(UNIX AND NOT APPLE)
+    set_target_properties(detection_test_app PROPERTIES
+        INSTALL_RPATH "${ONNXRUNTIME_LIB_DIR}"
+        BUILD_WITH_INSTALL_RPATH TRUE
+    )
+endif()
 
 # Print version information during cmake configuration
 message(STATUS "OpenCV version: ${OpenCV_VERSION}")
@@ -92,4 +78,4 @@ message(STATUS "Calibration include dirs: ${CALIBRATION_INCLUDE_DIRS}")
 message(STATUS "Detector include dirs: ${DETECTOR_INCLUDE_DIRS}")
 
 # Install targets
-install(TARGETS detection_test_app enhanced_detector_main preprocessor_main test_calibration_image DESTINATION bin) 
+install(TARGETS detection_test_app DESTINATION bin) 

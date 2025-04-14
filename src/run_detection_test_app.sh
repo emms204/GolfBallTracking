@@ -19,16 +19,14 @@ NO_CALIBRATION=0
 # Parse command-line arguments
 while [[ "$#" -gt 0 ]]; do
     case $1 in
-        --calibration)
-            CALIBRATION_FILE="$2"
-            shift
+        --calibration=*)
+            CALIBRATION_FILE="${1#*=}"
             ;;
         --no-calibration)
             NO_CALIBRATION=1
             ;;
-        --video)
-            VIDEO_FILE="$2"
-            shift
+        --video=*)
+            VIDEO_FILE="${1#*=}"
             ;;
         --debug)
             USE_DEBUG=1
@@ -36,11 +34,11 @@ while [[ "$#" -gt 0 ]]; do
         --help)
             echo "Usage: $0 [options]"
             echo "Options:"
-            echo "  --calibration <file>  Path to calibration file (default: $CALIBRATION_FILE)"
-            echo "  --no-calibration      Disable calibration even if a calibration file exists"
-            echo "  --video <file>        Path to video file (if not specified, uses camera)"
-            echo "  --debug               Run with GDB to debug crashes"
-            echo "  --help                Show this help message"
+            echo "  --calibration=<file>   Path to calibration file (default: $CALIBRATION_FILE)"
+            echo "  --no-calibration       Disable calibration even if a calibration file exists"
+            echo "  --video=<file>         Path to video file (if not specified, uses camera)"
+            echo "  --debug                Run with GDB to debug crashes"
+            echo "  --help                 Show this help message"
             exit 0
             ;;
         *)
@@ -129,8 +127,8 @@ fi
 echo -e "${GREEN}Running detection test app...${NC}"
 echo -e "${YELLOW}Press 'q' to quit, 'c' to toggle calibration, 'p' to pause/resume${NC}"
 
-# Build command arguments using arrays for proper space handling
-cmd=("./src/detection_test_app" "--model" "$MODEL_PATH" "--classes" "$CLASSES_PATH")
+# Build command with equals format arguments
+cmd=("./src/detection_test_app" "--model=$MODEL_PATH" "--classes=$CLASSES_PATH")
 
 # Handle calibration options
 if [ "$NO_CALIBRATION" -eq 1 ]; then
@@ -141,13 +139,13 @@ elif [ ! -f "$CALIBRATION_FILE" ]; then
     echo -e "${YELLOW}Running without calibration. You can generate a calibration file using the calibration tool.${NC}"
 else
     echo -e "${GREEN}Calibration file found at $CALIBRATION_FILE. Using for undistortion.${NC}"
-    cmd+=("--calibration" "$CALIBRATION_FILE")
+    cmd+=("--calibration=$CALIBRATION_FILE")
 fi
 
 # Set up video argument if specified
 if [ -n "$VIDEO_FILE" ]; then
     echo -e "${GREEN}Using video file: $VIDEO_FILE${NC}"
-    cmd+=("--video" "$VIDEO_FILE")
+    cmd+=("--video=$VIDEO_FILE")
 else
     echo -e "${YELLOW}Using camera as input source${NC}"
 fi

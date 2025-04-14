@@ -1,4 +1,0 @@
-@echo off
-SET PATH=@ONNXRUNTIME_LIB_DIR@;%PATH%
-
-@CMAKE_BINARY_DIR@\bin\enhanced_detector.exe %*

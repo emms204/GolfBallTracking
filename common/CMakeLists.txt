@@ -18,6 +18,7 @@ include_directories(
 add_library(common
     src/image_utils.cpp
     src/camera_params.cpp
+    src/path_utils.cpp
 )
 
 target_include_directories(common

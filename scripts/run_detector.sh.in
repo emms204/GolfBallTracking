@@ -1,8 +1,0 @@
-#!/bin/bash
-# Run detector tool script
-
-# Move to the directory where the script is located
-cd "${0%/*}" || exit
-
-# Run the detector tool
-@CMAKE_BINARY_DIR@/test_detector "$@" 

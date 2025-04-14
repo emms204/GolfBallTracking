@@ -39,8 +39,12 @@ target_link_libraries(calibrate_camera
     PRIVATE
         calibration
         ${OpenCV_LIBS}
-        stdc++fs
 )
+
+# Platform-specific filesystem library linkage
+if(NOT WIN32)
+    target_link_libraries(calibrate_camera PRIVATE stdc++fs)
+endif()
 
 # Install targets
 install(TARGETS calibration calibrate_camera

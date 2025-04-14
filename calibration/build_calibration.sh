@@ -4,46 +4,102 @@
 
 set -e
 
+# Colors for output
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+# Default parameters
+BUILD_DIR="build"
+CMAKE_OPTIONS=""
+BUILD_ONLY=true
+INPUT_SOURCE=""
+PATTERN_SIZE="9x6"
+SQUARE_SIZE=20
+OUTPUT_FILE="camera_calibration.yaml"
+
+# Parse command-line arguments
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --build-dir=*)
+            BUILD_DIR="${1#*=}"
+            ;;
+        --run)
+            BUILD_ONLY=false
+            ;;
+        --input=*)
+            INPUT_SOURCE="${1#*=}"
+            ;;
+        --pattern=*)
+            PATTERN_SIZE="${1#*=}"
+            ;;
+        --square=*)
+            SQUARE_SIZE="${1#*=}"
+            ;;
+        --output=*)
+            OUTPUT_FILE="${1#*=}"
+            ;;
+        --cmake-options=*)
+            CMAKE_OPTIONS="${1#*=}"
+            ;;
+        --help|-h)
+            echo "Usage: $0 [options]"
+            echo ""
+            echo "Options:"
+            echo "  --build-dir=<dir>      Build directory (default: $BUILD_DIR)"
+            echo "  --run                  Build and run the calibration tool"
+            echo "  --input=<source>       Input source (camera index or directory path)"
+            echo "  --pattern=<size>       Chessboard pattern size (e.g., 9x6) (default: $PATTERN_SIZE)"
+            echo "  --square=<size>        Square size in mm (default: $SQUARE_SIZE)"
+            echo "  --output=<file>        Output calibration file (default: $OUTPUT_FILE)"
+            echo "  --cmake-options=<opts> Additional CMake options"
+            echo "  --help, -h             Show this help message"
+            echo ""
+            echo "Example:"
+            echo "  $0 --run --input=0 --pattern=9x6 --square=20 --output=my_camera.yaml"
+            echo "  $0 --run --input=/path/to/images --pattern=4x4 --square=100"
+            exit 0
+            ;;
+        *)
+            echo "Unknown parameter: $1"
+            echo "Use --help for usage information."
+            exit 1
+            ;;
+    esac
+    shift
+done
+
 # Create a build directory inside the calibration folder
-mkdir -p build
-cd build
+mkdir -p ${BUILD_DIR}
+cd ${BUILD_DIR}
 
 # Configure and build the project
-echo "Configuring calibration with CMake..."
-cmake ..
+echo -e "${YELLOW}Configuring calibration with CMake...${NC}"
+cmake ${CMAKE_OPTIONS} ..
 
-echo "Building the calibration tool..."
+echo -e "${YELLOW}Building the calibration tool...${NC}"
 make -j$(nproc) calibrate_camera
 
-echo "Build complete!"
+echo -e "${GREEN}Build complete!${NC}"
 
 # Check if we should run the application
-if [ "$1" == "--run" ]; then
-    # Default parameters if none provided
-    INPUT_SOURCE=${2:-0}  # Default to camera 0
-    PATTERN_SIZE=${3:-"9x6"}  # Default pattern size
-    SQUARE_SIZE=${4:-20}  # Default square size in mm
-    OUTPUT_FILE=${5:-"camera_calibration.yaml"}  # Default output file
+if [ "$BUILD_ONLY" = false ]; then
+    if [ -z "$INPUT_SOURCE" ]; then
+        echo -e "${RED}Error: Input source not specified. Use --input=<source> parameter.${NC}"
+        echo "Use --help for usage information."
+        exit 1
+    fi
 
-    echo "Running camera calibration with:"
-    echo "  Input source: $INPUT_SOURCE"
-    echo "  Pattern size: $PATTERN_SIZE"
-    echo "  Square size: $SQUARE_SIZE mm"
-    echo "  Output file: $OUTPUT_FILE"
+    echo -e "${GREEN}Running camera calibration with:${NC}"
+    echo -e "${YELLOW}  Input source: $INPUT_SOURCE${NC}"
+    echo -e "${YELLOW}  Pattern size: $PATTERN_SIZE${NC}"
+    echo -e "${YELLOW}  Square size: $SQUARE_SIZE mm${NC}"
+    echo -e "${YELLOW}  Output file: $OUTPUT_FILE${NC}"
     
-    # Run the application
+    # Run the application with space-separated arguments
     ./calibrate_camera --input "$INPUT_SOURCE" --pattern_size "$PATTERN_SIZE" --square_size "$SQUARE_SIZE" --output "$OUTPUT_FILE"
-elif [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
-    echo "Usage: $0 [options]"
-    echo ""
-    echo "Options:"
-    echo "  --run [input] [pattern_size] [square_size] [output]  Build and run the calibration tool"
-    echo "  --help, -h                                          Show this help message"
-    echo ""
-    echo "Example:"
-    echo "  $0 --run 0 9x6 20 my_camera.yaml    # Calibrate using camera 0 with 9x6 pattern"
-    echo "  $0 --run /path/to/images 9x6 25     # Calibrate using images with 9x6 pattern, 25mm squares"
 fi
 
 cd ..
-echo "Done." 
+echo -e "${GREEN}Done.${NC}" 

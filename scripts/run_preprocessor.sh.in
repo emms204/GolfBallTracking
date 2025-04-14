@@ -1,8 +1,0 @@
-#!/bin/bash
-# Run preprocessor tool script
-
-# Move to the directory where the script is located
-cd "${0%/*}" || exit
-
-# Run the preprocessor tool
-@CMAKE_BINARY_DIR@/preprocessor_app "$@" 

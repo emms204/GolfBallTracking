@@ -165,12 +165,15 @@ def save_calibration_yaml(filename, camera_matrix, dist_coeffs, image_width, ima
 
 def main():
     # Parse command-line arguments
+    # Note: argparse automatically handles both "--arg=value" and "--arg value" formats
     parser = argparse.ArgumentParser(description='Camera calibration from chessboard images')
     parser.add_argument('--master', required=True, help='Directory containing master camera images')
     parser.add_argument('--slave', required=True, help='Directory containing slave camera images')
     parser.add_argument('--output', default='calibration_results', help='Output directory for calibration files')
     parser.add_argument('--pattern', default='4x4', help='Chessboard pattern internal corners (NxM)')
     parser.add_argument('--square', type=float, default=100.0, help='Chessboard square size in mm')
+    
+    # Parse args and handle equals format (argparse handles this automatically)
     args = parser.parse_args()
     
     # Parameters

@@ -6,6 +6,7 @@
 #include <chrono>
 #include <thread>
 #include "calibrator.h"
+#include "path_utils.h"
 
 namespace calibration {
 
@@ -76,25 +77,30 @@ bool processImageDirectory(const std::string& dirPath, Calibrator& calibrator,
                          int minImages, const std::string& outputFile) {
     std::vector<std::string> imageFiles;
     
+    // Use PathUtils for cross-platform path handling
+    std::string normalizedPath = common::PathUtils::normalizePath(dirPath);
+    
     // Check if directory exists
-    if (!std::filesystem::exists(dirPath) || !std::filesystem::is_directory(dirPath)) {
-        std::cerr << "Error: Directory " << dirPath << " does not exist or is not a directory." << std::endl;
+    if (!common::PathUtils::exists(normalizedPath)) {
+        std::cerr << "Error: Directory " << normalizedPath << " does not exist or is not a directory." << std::endl;
         return false;
     }
     
-    // Collect all image files
-    for (const auto& entry : std::filesystem::directory_iterator(dirPath)) {
+    // Collect all image files using std::filesystem
+    std::filesystem::path fsPath(normalizedPath);
+    for (const auto& entry : std::filesystem::directory_iterator(fsPath)) {
         if (entry.is_regular_file()) {
             std::string ext = entry.path().extension().string();
             std::transform(ext.begin(), ext.end(), ext.begin(), ::tolower);
             if (ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".bmp") {
-                imageFiles.push_back(entry.path().string());
+                // Store paths with portable format for config files
+                imageFiles.push_back(common::PathUtils::toPortablePath(entry.path().string()));
             }
         }
     }
     
     if (imageFiles.empty()) {
-        std::cerr << "Error: No image files found in directory " << dirPath << std::endl;
+        std::cerr << "Error: No image files found in directory " << normalizedPath << std::endl;
         return false;
     }
     
@@ -167,9 +173,22 @@ bool processImageDirectory(const std::string& dirPath, Calibrator& calibrator,
     // Show calibration results
     std::cout << calibrator.getQualityAssessment() << std::endl;
     
+    // Normalize the output file path
+    std::string normalizedOutputPath = common::PathUtils::normalizePath(outputFile);
+    
+    // Ensure the output directory exists
+    std::string outputDir = common::PathUtils::getDirectoryName(normalizedOutputPath);
+    if (!outputDir.empty() && !common::PathUtils::exists(outputDir)) {
+        std::cout << "Creating output directory: " << outputDir << std::endl;
+        if (!common::PathUtils::createDirectory(outputDir)) {
+            std::cerr << "Error: Failed to create output directory " << outputDir << std::endl;
+            return false;
+        }
+    }
+    
     // Save calibration parameters
-    std::cout << "Saving calibration parameters to " << outputFile << "..." << std::endl;
-    if (!calibrator.saveCalibration(outputFile)) {
+    std::cout << "Saving calibration parameters to " << normalizedOutputPath << "..." << std::endl;
+    if (!calibrator.saveCalibration(normalizedOutputPath)) {
         std::cerr << "Error: Failed to save calibration parameters." << std::endl;
         return false;
     }
@@ -293,9 +312,22 @@ bool processCamera(int cameraIndex, Calibrator& calibrator, int minImages, int s
     // Show calibration results
     std::cout << calibrator.getQualityAssessment() << std::endl;
     
+    // Normalize the output file path
+    std::string normalizedOutputPath = common::PathUtils::normalizePath(outputFile);
+    
+    // Ensure the output directory exists
+    std::string outputDir = common::PathUtils::getDirectoryName(normalizedOutputPath);
+    if (!outputDir.empty() && !common::PathUtils::exists(outputDir)) {
+        std::cout << "Creating output directory: " << outputDir << std::endl;
+        if (!common::PathUtils::createDirectory(outputDir)) {
+            std::cerr << "Error: Failed to create output directory " << outputDir << std::endl;
+            return false;
+        }
+    }
+    
     // Save calibration parameters
-    std::cout << "Saving calibration parameters to " << outputFile << "..." << std::endl;
-    if (!calibrator.saveCalibration(outputFile)) {
+    std::cout << "Saving calibration parameters to " << normalizedOutputPath << "..." << std::endl;
+    if (!calibrator.saveCalibration(normalizedOutputPath)) {
         std::cerr << "Error: Failed to save calibration parameters." << std::endl;
         return false;
     }
@@ -367,6 +399,8 @@ int main(int argc, char** argv) {
             }
         } else if (arg == "--output" && i + 1 < argc) {
             outputFile = argv[++i];
+            // Normalize the path to ensure cross-platform compatibility
+            outputFile = common::PathUtils::toPortablePath(outputFile);
         } else if (arg == "--min_images" && i + 1 < argc) {
             try {
                 minImages = std::stoi(argv[++i]);
@@ -395,10 +429,7 @@ int main(int argc, char** argv) {
         return 1;
     }
     
-    // Initialize calibrator
-    calibration::Calibrator calibrator(patternSize, squareSize);
-    
-    // Process input based on type
+    // If the input source is a directory path, normalize it
     bool isNumeric = true;
     for (char c : inputSource) {
         if (!std::isdigit(c)) {
@@ -407,6 +438,15 @@ int main(int argc, char** argv) {
         }
     }
     
+    if (!isNumeric) {
+        // If it's a path and not a camera index, normalize it
+        inputSource = common::PathUtils::normalizePath(inputSource);
+    }
+    
+    // Initialize calibrator
+    calibration::Calibrator calibrator(patternSize, squareSize);
+    
+    // Process input based on type
     bool success;
     if (isNumeric) {
         // Input is a camera index
