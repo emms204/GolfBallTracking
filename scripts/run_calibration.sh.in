@@ -1,0 +1,8 @@
+#!/bin/bash
+# Run calibration tool script
+
+# Move to the directory where the script is located
+cd "${0%/*}" || exit
+
+# Run the calibration tool
+@CMAKE_BINARY_DIR@/calibration_app "$@" 

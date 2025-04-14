@@ -12,6 +12,8 @@ __pycache__/
 # Debug files and logs
 debug_output.log
 debug_circles/
+stereo_calibration/debug_corners
+calibration_results/debug_corners
 *.log
 
 # IDE related
@@ -31,6 +33,7 @@ Tracking3D_1.zip
 Chess 8mm
 Chess 8mm1
 Combined
+ignore
 
 # Temporary files
 check_repo.sh
@@ -39,4 +42,4 @@ check_repo.sh
 # Comment these out if you want to include them
 # *.onnx
 # *.pt
-
+.cursorindexingignore
