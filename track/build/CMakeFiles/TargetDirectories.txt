@@ -1,0 +1,15 @@
+/home/emms/Downloads/Test Video/track/build/CMakeFiles/onnx_detector.dir
+/home/emms/Downloads/Test Video/track/build/CMakeFiles/yolo_bytetrack.dir
+/home/emms/Downloads/Test Video/track/build/CMakeFiles/edit_cache.dir
+/home/emms/Downloads/Test Video/track/build/CMakeFiles/rebuild_cache.dir
+/home/emms/Downloads/Test Video/track/build/CMakeFiles/list_install_components.dir
+/home/emms/Downloads/Test Video/track/build/CMakeFiles/install.dir
+/home/emms/Downloads/Test Video/track/build/CMakeFiles/install/local.dir
+/home/emms/Downloads/Test Video/track/build/CMakeFiles/install/strip.dir
+/home/emms/Downloads/Test Video/track/build/ByteTrack-cpp/CMakeFiles/bytetrack.dir
+/home/emms/Downloads/Test Video/track/build/ByteTrack-cpp/CMakeFiles/edit_cache.dir
+/home/emms/Downloads/Test Video/track/build/ByteTrack-cpp/CMakeFiles/rebuild_cache.dir
+/home/emms/Downloads/Test Video/track/build/ByteTrack-cpp/CMakeFiles/list_install_components.dir
+/home/emms/Downloads/Test Video/track/build/ByteTrack-cpp/CMakeFiles/install.dir
+/home/emms/Downloads/Test Video/track/build/ByteTrack-cpp/CMakeFiles/install/local.dir
+/home/emms/Downloads/Test Video/track/build/ByteTrack-cpp/CMakeFiles/install/strip.dir

@@ -1,0 +1,3200 @@
+=== Python ONNX Runtime Object Detector ===
+Time: 2025-04-14 02:52:35
+Video: videos/i58-Master-1.avi
+Model: best.onnx
+Camera: master
+Calibration: stereo_calibration/calibration_results/master_calibration_8mm.npz
+ONNX Runtime available providers: ['AzureExecutionProvider', 'CPUExecutionProvider']
+Using CPU Execution Provider
+Model input name: images, shape: ['batch', 3, 'height', 'width']
+Model output names: ['output0']
+Loaded 2 class names
+Loaded NPZ calibration from stereo_calibration/calibration_results/master_calibration_8mm.npz
+Available keys in calibration file: ['camera_matrix', 'dist_coeffs', 'rvecs', 'tvecs']
+Loaded camera matrix: [[1.06683810e+03 0.00000000e+00 5.17516936e+02]
+ [0.00000000e+00 1.07007353e+03 1.73918911e+02]
+ [0.00000000e+00 0.00000000e+00 1.00000000e+00]]
+Loaded distortion coefficients: [[-0.51022587  0.18676868  0.01070828 -0.025619    0.0989339 ]]
+Will create undistortion maps dynamically
+Video info: 440x540, 400.0 fps, 205 frames
+Created undistortion maps
+
+================= FRAME 0 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 151.77 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887469):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.356689,86.125580)
+  Normalized center: (0.930356,0.159492)
+  Box size ratios (w,h): 0.053757,0.038631
+  Box area: 493.4 pixels (0.207669% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 1 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 135.75 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886886):
+  Box coords (x,y,w,h): 397.4,75.7,23.6,20.9
+  Center point: (409.248383,86.128799)
+  Normalized center: (0.930110,0.159498)
+  Box size ratios (w,h): 0.053646,0.038626
+  Box area: 492.3 pixels (0.207217% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 2 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.84 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887344):
+  Box coords (x,y,w,h): 397.6,75.7,23.6,20.9
+  Center point: (409.367035,86.156189)
+  Normalized center: (0.930380,0.159548)
+  Box size ratios (w,h): 0.053640,0.038700
+  Box area: 493.2 pixels (0.207588% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 3 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 172.63 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886582):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.9
+  Center point: (409.390564,86.146683)
+  Normalized center: (0.930433,0.159531)
+  Box size ratios (w,h): 0.053981,0.038788
+  Box area: 497.5 pixels (0.209379% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 4 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 154.18 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887188):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.383240,86.154419)
+  Normalized center: (0.930416,0.159545)
+  Box size ratios (w,h): 0.053803,0.038767
+  Box area: 495.6 pixels (0.208579% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 5 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 139.68 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887428):
+  Box coords (x,y,w,h): 397.6,75.7,23.8,20.9
+  Center point: (409.440979,86.179153)
+  Normalized center: (0.930548,0.159591)
+  Box size ratios (w,h): 0.053979,0.038670
+  Box area: 496.0 pixels (0.208739% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 6 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 143.63 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886687):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.9
+  Center point: (409.371887,86.146812)
+  Normalized center: (0.930391,0.159531)
+  Box size ratios (w,h): 0.054088,0.038740
+  Box area: 497.9 pixels (0.209538% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 7 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 147.36 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887192):
+  Box coords (x,y,w,h): 397.6,75.8,23.6,20.7
+  Center point: (409.375916,86.189400)
+  Normalized center: (0.930400,0.159610)
+  Box size ratios (w,h): 0.053741,0.038378
+  Box area: 490.0 pixels (0.206247% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 8 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 143.19 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.888286):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.349670,86.178116)
+  Normalized center: (0.930340,0.159589)
+  Box size ratios (w,h): 0.053917,0.038763
+  Box area: 496.6 pixels (0.208995% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 9 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 119.30 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886102):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.371094,86.123466)
+  Normalized center: (0.930389,0.159488)
+  Box size ratios (w,h): 0.053830,0.038727
+  Box area: 495.3 pixels (0.208466% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 10 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.16 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.888291):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.206848,86.215042)
+  Normalized center: (0.930016,0.159657)
+  Box size ratios (w,h): 0.053774,0.038672
+  Box area: 494.1 pixels (0.207957% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 11 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 112.18 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887344):
+  Box coords (x,y,w,h): 397.5,75.8,23.6,20.9
+  Center point: (409.328156,86.199173)
+  Normalized center: (0.930291,0.159628)
+  Box size ratios (w,h): 0.053735,0.038646
+  Box area: 493.4 pixels (0.207662% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 12 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 128.55 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886576):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.343262,86.157349)
+  Normalized center: (0.930326,0.159551)
+  Box size ratios (w,h): 0.053893,0.038790
+  Box area: 496.7 pixels (0.209053% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 13 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 109.71 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887162):
+  Box coords (x,y,w,h): 397.6,75.7,23.7,20.9
+  Center point: (409.395874,86.180573)
+  Normalized center: (0.930445,0.159594)
+  Box size ratios (w,h): 0.053839,0.038742
+  Box area: 495.6 pixels (0.208581% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 14 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 142.59 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887003):
+  Box coords (x,y,w,h): 397.5,75.6,23.8,20.9
+  Center point: (409.386047,86.106506)
+  Normalized center: (0.930423,0.159456)
+  Box size ratios (w,h): 0.054087,0.038754
+  Box area: 498.0 pixels (0.209608% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 15 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.37 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886661):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.353760,86.113129)
+  Normalized center: (0.930349,0.159469)
+  Box size ratios (w,h): 0.053776,0.038708
+  Box area: 494.6 pixels (0.208157% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 16 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 149.67 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886773):
+  Box coords (x,y,w,h): 397.5,75.6,23.7,20.9
+  Center point: (409.354218,86.113770)
+  Normalized center: (0.930350,0.159470)
+  Box size ratios (w,h): 0.053948,0.038788
+  Box area: 497.2 pixels (0.209251% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 17 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 142.91 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887265):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.9
+  Center point: (409.422699,86.198135)
+  Normalized center: (0.930506,0.159626)
+  Box size ratios (w,h): 0.054006,0.038728
+  Box area: 496.9 pixels (0.209153% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 18 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.72 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887067):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.8
+  Center point: (409.354248,86.162521)
+  Normalized center: (0.930351,0.159560)
+  Box size ratios (w,h): 0.053840,0.038579
+  Box area: 493.5 pixels (0.207708% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 19 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 163.41 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.884591):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.8
+  Center point: (409.345551,86.135925)
+  Normalized center: (0.930331,0.159511)
+  Box size ratios (w,h): 0.053872,0.038560
+  Box area: 493.6 pixels (0.207729% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 20 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.60 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.888212):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.344849,86.147255)
+  Normalized center: (0.930329,0.159532)
+  Box size ratios (w,h): 0.054188,0.038690
+  Box area: 498.1 pixels (0.209654% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 21 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 142.96 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.888209):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,21.0
+  Center point: (409.394592,86.177605)
+  Normalized center: (0.930442,0.159588)
+  Box size ratios (w,h): 0.053892,0.038824
+  Box area: 497.1 pixels (0.209229% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 22 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 139.88 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886984):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.366394,86.136902)
+  Normalized center: (0.930378,0.159513)
+  Box size ratios (w,h): 0.053976,0.038796
+  Box area: 497.5 pixels (0.209406% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 23 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 137.87 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.885617):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.345947,86.097916)
+  Normalized center: (0.930332,0.159441)
+  Box size ratios (w,h): 0.053960,0.038656
+  Box area: 495.6 pixels (0.208589% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 24 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 232.53 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887092):
+  Box coords (x,y,w,h): 397.3,75.7,23.7,20.9
+  Center point: (409.170807,86.097122)
+  Normalized center: (0.929934,0.159439)
+  Box size ratios (w,h): 0.053766,0.038628
+  Box area: 493.5 pixels (0.207688% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 25 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.69 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.888540):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.367371,86.184357)
+  Normalized center: (0.930380,0.159601)
+  Box size ratios (w,h): 0.053875,0.038668
+  Box area: 495.0 pixels (0.208326% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 26 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 107.96 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887057):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.334167,86.146194)
+  Normalized center: (0.930305,0.159530)
+  Box size ratios (w,h): 0.053973,0.038648
+  Box area: 495.6 pixels (0.208595% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 27 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 139.93 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887242):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.9
+  Center point: (409.355835,86.161865)
+  Normalized center: (0.930354,0.159559)
+  Box size ratios (w,h): 0.053986,0.038687
+  Box area: 496.2 pixels (0.208857% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 28 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 145.00 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887092):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.412720,86.152939)
+  Normalized center: (0.930483,0.159542)
+  Box size ratios (w,h): 0.053947,0.038755
+  Box area: 496.7 pixels (0.209069% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 29 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 119.12 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886210):
+  Box coords (x,y,w,h): 397.5,75.8,23.7,20.8
+  Center point: (409.368469,86.188667)
+  Normalized center: (0.930383,0.159609)
+  Box size ratios (w,h): 0.053912,0.038603
+  Box area: 494.5 pixels (0.208116% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 30 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.10 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.885418):
+  Box coords (x,y,w,h): 397.6,75.7,23.6,20.9
+  Center point: (409.400940,86.122604)
+  Normalized center: (0.930457,0.159486)
+  Box size ratios (w,h): 0.053657,0.038659
+  Box area: 492.9 pixels (0.207433% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 31 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 140.75 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886483):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.9
+  Center point: (409.354736,86.169281)
+  Normalized center: (0.930352,0.159573)
+  Box size ratios (w,h): 0.054014,0.038742
+  Box area: 497.2 pixels (0.209263% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 32 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 139.29 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887526):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.276245,86.138641)
+  Normalized center: (0.930173,0.159516)
+  Box size ratios (w,h): 0.054003,0.038677
+  Box area: 496.3 pixels (0.208867% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 33 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 109.61 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886561):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.9
+  Center point: (409.349640,86.145279)
+  Normalized center: (0.930340,0.159528)
+  Box size ratios (w,h): 0.054008,0.038779
+  Box area: 497.6 pixels (0.209436% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 34 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 107.84 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887052):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.9
+  Center point: (409.357361,86.183731)
+  Normalized center: (0.930358,0.159600)
+  Box size ratios (w,h): 0.053999,0.038719
+  Box area: 496.8 pixels (0.209077% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 35 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 119.06 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886649):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.345398,86.123535)
+  Normalized center: (0.930330,0.159488)
+  Box size ratios (w,h): 0.053810,0.038670
+  Box area: 494.4 pixels (0.208085% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 36 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 111.20 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886868):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.8
+  Center point: (409.342163,86.151207)
+  Normalized center: (0.930323,0.159539)
+  Box size ratios (w,h): 0.054048,0.038591
+  Box area: 495.6 pixels (0.208576% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 37 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 142.08 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.885953):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.9
+  Center point: (409.367981,86.141640)
+  Normalized center: (0.930382,0.159522)
+  Box size ratios (w,h): 0.054043,0.038718
+  Box area: 497.2 pixels (0.209244% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 38 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 140.67 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886785):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.330322,86.160095)
+  Normalized center: (0.930296,0.159556)
+  Box size ratios (w,h): 0.054034,0.038625
+  Box area: 495.9 pixels (0.208706% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 39 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 142.83 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886089):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.306763,86.163483)
+  Normalized center: (0.930243,0.159562)
+  Box size ratios (w,h): 0.053876,0.038716
+  Box area: 495.6 pixels (0.208585% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 40 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 146.44 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887444):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.295105,86.145554)
+  Normalized center: (0.930216,0.159529)
+  Box size ratios (w,h): 0.054104,0.038640
+  Box area: 496.7 pixels (0.209058% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 41 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.47 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886927):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.356964,86.176224)
+  Normalized center: (0.930357,0.159586)
+  Box size ratios (w,h): 0.053917,0.038742
+  Box area: 496.3 pixels (0.208887% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 42 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 139.65 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886069):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.8
+  Center point: (409.307098,86.134079)
+  Normalized center: (0.930243,0.159508)
+  Box size ratios (w,h): 0.053882,0.038572
+  Box area: 493.8 pixels (0.207834% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 43 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 146.66 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886235):
+  Box coords (x,y,w,h): 397.5,75.6,23.7,20.9
+  Center point: (409.320404,86.090103)
+  Normalized center: (0.930274,0.159426)
+  Box size ratios (w,h): 0.053843,0.038698
+  Box area: 495.1 pixels (0.208360% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 44 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 137.34 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.885763):
+  Box coords (x,y,w,h): 397.5,75.7,23.6,20.9
+  Center point: (409.326569,86.154831)
+  Normalized center: (0.930288,0.159546)
+  Box size ratios (w,h): 0.053690,0.038719
+  Box area: 493.9 pixels (0.207882% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 45 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.42 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886016):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.339966,86.119949)
+  Normalized center: (0.930318,0.159481)
+  Box size ratios (w,h): 0.053914,0.038669
+  Box area: 495.4 pixels (0.208484% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 46 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 111.18 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887701):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.9
+  Center point: (409.359985,86.140152)
+  Normalized center: (0.930364,0.159519)
+  Box size ratios (w,h): 0.054084,0.038760
+  Box area: 498.1 pixels (0.209629% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 47 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 137.40 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887475):
+  Box coords (x,y,w,h): 397.5,75.7,23.8,20.9
+  Center point: (409.380310,86.145714)
+  Normalized center: (0.930410,0.159529)
+  Box size ratios (w,h): 0.054000,0.038634
+  Box area: 495.7 pixels (0.208626% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 48 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 119.38 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.885900):
+  Box coords (x,y,w,h): 397.4,75.7,23.7,20.8
+  Center point: (409.270630,86.129257)
+  Normalized center: (0.930161,0.159499)
+  Box size ratios (w,h): 0.053762,0.038603
+  Box area: 493.1 pixels (0.207533% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 49 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 115.66 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886671):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.347229,86.158203)
+  Normalized center: (0.930335,0.159552)
+  Box size ratios (w,h): 0.053945,0.038668
+  Box area: 495.6 pixels (0.208593% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 50 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 115.23 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.888379):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.306396,86.143906)
+  Normalized center: (0.930242,0.159526)
+  Box size ratios (w,h): 0.053867,0.038683
+  Box area: 495.1 pixels (0.208373% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 51 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 116.39 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887406):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.350037,86.156616)
+  Normalized center: (0.930341,0.159549)
+  Box size ratios (w,h): 0.053844,0.038669
+  Box area: 494.7 pixels (0.208211% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 52 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 111.90 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.885318):
+  Box coords (x,y,w,h): 397.5,75.7,23.6,20.9
+  Center point: (409.337097,86.146118)
+  Normalized center: (0.930312,0.159530)
+  Box size ratios (w,h): 0.053704,0.038645
+  Box area: 493.1 pixels (0.207538% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 53 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 117.22 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887874):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,21.0
+  Center point: (409.317902,86.194801)
+  Normalized center: (0.930268,0.159620)
+  Box size ratios (w,h): 0.054128,0.038802
+  Box area: 499.0 pixels (0.210025% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 54 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 115.90 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887821):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.8
+  Center point: (409.334167,86.173302)
+  Normalized center: (0.930305,0.159580)
+  Box size ratios (w,h): 0.053888,0.038605
+  Box area: 494.3 pixels (0.208036% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 55 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 106.38 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.885478):
+  Box coords (x,y,w,h): 397.4,75.7,23.7,20.9
+  Center point: (409.233948,86.159775)
+  Normalized center: (0.930077,0.159555)
+  Box size ratios (w,h): 0.053801,0.038723
+  Box area: 495.0 pixels (0.208334% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 56 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 111.30 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.888194):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,21.0
+  Center point: (409.291687,86.154205)
+  Normalized center: (0.930208,0.159545)
+  Box size ratios (w,h): 0.054138,0.038805
+  Box area: 499.2 pixels (0.210082% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 57 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 107.02 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886915):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.264038,86.206360)
+  Normalized center: (0.930146,0.159641)
+  Box size ratios (w,h): 0.053922,0.038691
+  Box area: 495.7 pixels (0.208631% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 58 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 108.30 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886713):
+  Box coords (x,y,w,h): 397.4,75.7,23.7,20.9
+  Center point: (409.278931,86.115013)
+  Normalized center: (0.930179,0.159472)
+  Box size ratios (w,h): 0.053840,0.038752
+  Box area: 495.7 pixels (0.208640% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 59 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 106.90 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887223):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.343567,86.155945)
+  Normalized center: (0.930326,0.159548)
+  Box size ratios (w,h): 0.053868,0.038727
+  Box area: 495.7 pixels (0.208617% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 60 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 152.55 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886654):
+  Box coords (x,y,w,h): 397.4,75.7,23.7,20.9
+  Center point: (409.269653,86.169098)
+  Normalized center: (0.930158,0.159572)
+  Box size ratios (w,h): 0.053827,0.038692
+  Box area: 494.8 pixels (0.208266% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 61 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 121.61 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887527):
+  Box coords (x,y,w,h): 397.4,75.7,23.7,21.0
+  Center point: (409.265808,86.173439)
+  Normalized center: (0.930150,0.159580)
+  Box size ratios (w,h): 0.053946,0.038808
+  Box area: 497.4 pixels (0.209353% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 62 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 106.45 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886494):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.8
+  Center point: (409.232391,86.179489)
+  Normalized center: (0.930074,0.159592)
+  Box size ratios (w,h): 0.053776,0.038559
+  Box area: 492.7 pixels (0.207354% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 63 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 120.05 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886846):
+  Box coords (x,y,w,h): 397.3,75.6,23.8,21.0
+  Center point: (409.209442,86.131889)
+  Normalized center: (0.930021,0.159503)
+  Box size ratios (w,h): 0.054135,0.038831
+  Box area: 499.5 pixels (0.210215% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 64 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 115.79 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887568):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.8
+  Center point: (409.287354,86.192673)
+  Normalized center: (0.930199,0.159616)
+  Box size ratios (w,h): 0.053817,0.038541
+  Box area: 492.8 pixels (0.207414% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 65 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 145.63 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887560):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,21.0
+  Center point: (409.323242,86.145767)
+  Normalized center: (0.930280,0.159529)
+  Box size ratios (w,h): 0.054013,0.038810
+  Box area: 498.1 pixels (0.209624% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 66 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 143.35 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887127):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.281219,86.135727)
+  Normalized center: (0.930185,0.159511)
+  Box size ratios (w,h): 0.054037,0.038733
+  Box area: 497.3 pixels (0.209302% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 67 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 153.54 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887850):
+  Box coords (x,y,w,h): 397.4,75.7,23.7,20.8
+  Center point: (409.262024,86.148201)
+  Normalized center: (0.930141,0.159534)
+  Box size ratios (w,h): 0.053764,0.038596
+  Box area: 493.0 pixels (0.207508% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 68 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 175.74 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887460):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.251984,86.162140)
+  Normalized center: (0.930118,0.159560)
+  Box size ratios (w,h): 0.054045,0.038788
+  Box area: 498.1 pixels (0.209628% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 69 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 147.31 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887703):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.277466,86.190575)
+  Normalized center: (0.930176,0.159612)
+  Box size ratios (w,h): 0.054091,0.038743
+  Box area: 497.9 pixels (0.209564% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 70 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 147.13 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887914):
+  Box coords (x,y,w,h): 397.3,75.8,23.8,20.9
+  Center point: (409.215576,86.213074)
+  Normalized center: (0.930035,0.159654)
+  Box size ratios (w,h): 0.053983,0.038621
+  Box area: 495.4 pixels (0.208489% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 71 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 120.90 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.885945):
+  Box coords (x,y,w,h): 397.5,75.7,23.6,20.9
+  Center point: (409.264679,86.165230)
+  Normalized center: (0.930147,0.159565)
+  Box size ratios (w,h): 0.053625,0.038705
+  Box area: 493.2 pixels (0.207558% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 72 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 149.88 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886771):
+  Box coords (x,y,w,h): 397.3,75.7,23.7,20.9
+  Center point: (409.191589,86.163757)
+  Normalized center: (0.929981,0.159563)
+  Box size ratios (w,h): 0.053881,0.038748
+  Box area: 496.0 pixels (0.208775% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 73 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 120.79 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886804):
+  Box coords (x,y,w,h): 397.4,75.7,23.7,20.9
+  Center point: (409.264618,86.158806)
+  Normalized center: (0.930147,0.159553)
+  Box size ratios (w,h): 0.053819,0.038711
+  Box area: 495.0 pixels (0.208338% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 74 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 145.13 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886350):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.351196,86.117126)
+  Normalized center: (0.930344,0.159476)
+  Box size ratios (w,h): 0.053946,0.038741
+  Box area: 496.6 pixels (0.208994% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 75 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 130.92 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887278):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.274353,86.113174)
+  Normalized center: (0.930169,0.159469)
+  Box size ratios (w,h): 0.054133,0.038700
+  Box area: 497.8 pixels (0.209494% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 76 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.39 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887246):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,21.0
+  Center point: (409.339874,86.215866)
+  Normalized center: (0.930318,0.159659)
+  Box size ratios (w,h): 0.054052,0.038813
+  Box area: 498.5 pixels (0.209790% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 77 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.25 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887049):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.8
+  Center point: (409.254883,86.197708)
+  Normalized center: (0.930125,0.159625)
+  Box size ratios (w,h): 0.053793,0.038544
+  Box area: 492.6 pixels (0.207343% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 78 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 118.74 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887498):
+  Box coords (x,y,w,h): 397.5,75.8,23.6,20.9
+  Center point: (409.300415,86.259682)
+  Normalized center: (0.930228,0.159740)
+  Box size ratios (w,h): 0.053592,0.038674
+  Box area: 492.5 pixels (0.207264% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 79 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 142.51 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.885953):
+  Box coords (x,y,w,h): 397.4,75.7,23.7,20.9
+  Center point: (409.292145,86.201187)
+  Normalized center: (0.930209,0.159632)
+  Box size ratios (w,h): 0.053855,0.038741
+  Box area: 495.7 pixels (0.208642% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 80 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 117.74 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886025):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.245239,86.193130)
+  Normalized center: (0.930103,0.159617)
+  Box size ratios (w,h): 0.054003,0.038747
+  Box area: 497.2 pixels (0.209249% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 81 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 115.75 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887503):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.310242,86.144150)
+  Normalized center: (0.930251,0.159526)
+  Box size ratios (w,h): 0.054025,0.038740
+  Box area: 497.3 pixels (0.209293% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 82 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 128.34 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886917):
+  Box coords (x,y,w,h): 397.3,75.8,23.7,20.9
+  Center point: (409.149567,86.216454)
+  Normalized center: (0.929885,0.159660)
+  Box size ratios (w,h): 0.053974,0.038671
+  Box area: 495.9 pixels (0.208724% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 83 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 110.26 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886832):
+  Box coords (x,y,w,h): 397.4,75.7,23.7,20.9
+  Center point: (409.272736,86.154053)
+  Normalized center: (0.930165,0.159545)
+  Box size ratios (w,h): 0.053945,0.038721
+  Box area: 496.3 pixels (0.208879% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 84 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 145.81 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886365):
+  Box coords (x,y,w,h): 397.3,75.6,23.8,21.0
+  Center point: (409.156616,86.129715)
+  Normalized center: (0.929901,0.159499)
+  Box size ratios (w,h): 0.054100,0.038839
+  Box area: 499.2 pixels (0.210120% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 85 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 108.16 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886656):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.283325,86.194458)
+  Normalized center: (0.930189,0.159619)
+  Box size ratios (w,h): 0.053943,0.038649
+  Box area: 495.4 pixels (0.208487% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 86 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 147.36 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887377):
+  Box coords (x,y,w,h): 397.3,75.7,23.7,20.9
+  Center point: (409.185913,86.164185)
+  Normalized center: (0.929968,0.159563)
+  Box size ratios (w,h): 0.053947,0.038657
+  Box area: 495.5 pixels (0.208543% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 87 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 143.91 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887195):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.254974,86.231697)
+  Normalized center: (0.930125,0.159688)
+  Box size ratios (w,h): 0.053904,0.038675
+  Box area: 495.3 pixels (0.208475% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 88 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.82 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887004):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.257935,86.165054)
+  Normalized center: (0.930132,0.159565)
+  Box size ratios (w,h): 0.054011,0.038763
+  Box area: 497.4 pixels (0.209363% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 89 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 140.65 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886988):
+  Box coords (x,y,w,h): 397.4,75.7,23.6,20.9
+  Center point: (409.263245,86.169319)
+  Normalized center: (0.930144,0.159573)
+  Box size ratios (w,h): 0.053712,0.038644
+  Box area: 493.2 pixels (0.207565% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 90 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 139.77 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886234):
+  Box coords (x,y,w,h): 397.5,75.7,23.7,20.9
+  Center point: (409.340057,86.176544)
+  Normalized center: (0.930318,0.159586)
+  Box size ratios (w,h): 0.053874,0.038670
+  Box area: 495.0 pixels (0.208330% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 91 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 146.61 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886024):
+  Box coords (x,y,w,h): 397.5,75.8,23.7,20.9
+  Center point: (409.288818,86.190125)
+  Normalized center: (0.930202,0.159611)
+  Box size ratios (w,h): 0.053784,0.038663
+  Box area: 494.1 pixels (0.207941% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 92 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 203.11 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887988):
+  Box coords (x,y,w,h): 397.5,75.8,23.8,20.9
+  Center point: (409.345642,86.235390)
+  Normalized center: (0.930331,0.159695)
+  Box size ratios (w,h): 0.054051,0.038691
+  Box area: 496.9 pixels (0.209127% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 93 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 114.14 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.888002):
+  Box coords (x,y,w,h): 397.4,75.8,23.8,20.9
+  Center point: (409.258972,86.222382)
+  Normalized center: (0.930134,0.159671)
+  Box size ratios (w,h): 0.054014,0.038660
+  Box area: 496.2 pixels (0.208820% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 94 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 112.60 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.889241):
+  Box coords (x,y,w,h): 397.3,75.8,23.8,20.9
+  Center point: (409.249847,86.240829)
+  Normalized center: (0.930113,0.159705)
+  Box size ratios (w,h): 0.054198,0.038795
+  Box area: 499.6 pixels (0.210260% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 95 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 116.78 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887407):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.309021,86.245956)
+  Normalized center: (0.930248,0.159715)
+  Box size ratios (w,h): 0.053967,0.038640
+  Box area: 495.5 pixels (0.208528% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 96 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 212.43 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887256):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.242126,86.240433)
+  Normalized center: (0.930096,0.159705)
+  Box size ratios (w,h): 0.053764,0.038752
+  Box area: 495.0 pixels (0.208344% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 97 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 251.21 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886564):
+  Box coords (x,y,w,h): 397.5,75.8,23.8,20.9
+  Center point: (409.329987,86.217278)
+  Normalized center: (0.930295,0.159662)
+  Box size ratios (w,h): 0.053981,0.038619
+  Box area: 495.3 pixels (0.208469% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 98 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 148.94 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887923):
+  Box coords (x,y,w,h): 397.4,75.7,23.8,20.9
+  Center point: (409.287323,86.210464)
+  Normalized center: (0.930198,0.159649)
+  Box size ratios (w,h): 0.053980,0.038748
+  Box area: 497.0 pixels (0.209164% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 99 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 142.54 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.888412):
+  Box coords (x,y,w,h): 397.3,75.8,23.7,20.9
+  Center point: (409.163147,86.229362)
+  Normalized center: (0.929916,0.159684)
+  Box size ratios (w,h): 0.053837,0.038662
+  Box area: 494.5 pixels (0.208144% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 100 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 143.07 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886945):
+  Box coords (x,y,w,h): 397.5,75.8,23.7,20.9
+  Center point: (409.297943,86.266281)
+  Normalized center: (0.930223,0.159752)
+  Box size ratios (w,h): 0.053804,0.038614
+  Box area: 493.6 pixels (0.207760% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 101 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 155.42 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887074):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.263214,86.206955)
+  Normalized center: (0.930144,0.159643)
+  Box size ratios (w,h): 0.053895,0.038726
+  Box area: 495.9 pixels (0.208712% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 102 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 151.41 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887580):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.313477,86.249512)
+  Normalized center: (0.930258,0.159721)
+  Box size ratios (w,h): 0.053959,0.038682
+  Box area: 495.9 pixels (0.208723% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 103 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 162.85 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886100):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.311890,86.262581)
+  Normalized center: (0.930254,0.159746)
+  Box size ratios (w,h): 0.053922,0.038738
+  Box area: 496.3 pixels (0.208886% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 104 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 164.47 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886770):
+  Box coords (x,y,w,h): 397.5,75.8,23.7,20.8
+  Center point: (409.304077,86.239075)
+  Normalized center: (0.930237,0.159702)
+  Box size ratios (w,h): 0.053795,0.038586
+  Box area: 493.2 pixels (0.207576% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 105 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 150.42 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.885977):
+  Box coords (x,y,w,h): 397.5,75.8,23.6,20.8
+  Center point: (409.294678,86.215881)
+  Normalized center: (0.930215,0.159659)
+  Box size ratios (w,h): 0.053668,0.038535
+  Box area: 491.4 pixels (0.206812% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 106 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 152.99 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886158):
+  Box coords (x,y,w,h): 397.4,75.7,23.9,21.0
+  Center point: (409.316284,86.185608)
+  Normalized center: (0.930264,0.159603)
+  Box size ratios (w,h): 0.054228,0.038889
+  Box area: 501.1 pixels (0.210884% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 107 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 122.16 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.888515):
+  Box coords (x,y,w,h): 397.3,75.8,23.7,20.9
+  Center point: (409.173279,86.257561)
+  Normalized center: (0.929939,0.159736)
+  Box size ratios (w,h): 0.053833,0.038724
+  Box area: 495.3 pixels (0.208460% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 108 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 139.07 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886381):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.283142,86.261017)
+  Normalized center: (0.930189,0.159743)
+  Box size ratios (w,h): 0.053874,0.038696
+  Box area: 495.3 pixels (0.208473% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 109 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 106.66 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886963):
+  Box coords (x,y,w,h): 397.4,75.8,23.8,20.9
+  Center point: (409.305115,86.281342)
+  Normalized center: (0.930239,0.159780)
+  Box size ratios (w,h): 0.054032,0.038718
+  Box area: 497.1 pixels (0.209199% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 110 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 121.89 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886457):
+  Box coords (x,y,w,h): 397.4,75.8,23.8,20.9
+  Center point: (409.280334,86.207611)
+  Normalized center: (0.930183,0.159644)
+  Box size ratios (w,h): 0.054119,0.038719
+  Box area: 497.9 pixels (0.209542% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 111 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 112.27 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886255):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.226288,86.227867)
+  Normalized center: (0.930060,0.159681)
+  Box size ratios (w,h): 0.053909,0.038645
+  Box area: 495.0 pixels (0.208331% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 112 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 110.42 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.887643):
+  Box coords (x,y,w,h): 397.5,75.8,23.7,20.9
+  Center point: (409.345703,86.233498)
+  Normalized center: (0.930331,0.159692)
+  Box size ratios (w,h): 0.053849,0.038643
+  Box area: 494.4 pixels (0.208087% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 113 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 113.18 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886433):
+  Box coords (x,y,w,h): 397.4,75.8,23.7,20.9
+  Center point: (409.276367,86.194717)
+  Normalized center: (0.930174,0.159620)
+  Box size ratios (w,h): 0.053829,0.038668
+  Box area: 494.6 pixels (0.208149% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 114 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 120.22 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.886891):
+  Box coords (x,y,w,h): 397.3,75.7,23.8,20.9
+  Center point: (409.222778,86.205368)
+  Normalized center: (0.930052,0.159640)
+  Box size ratios (w,h): 0.054014,0.038733
+  Box area: 497.1 pixels (0.209210% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 115 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 148.38 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.894276):
+  Box coords (x,y,w,h): 397.3,75.9,24.1,21.0
+  Center point: (409.351105,86.392265)
+  Normalized center: (0.930343,0.159986)
+  Box size ratios (w,h): 0.054671,0.038879
+  Box area: 505.0 pixels (0.212557% of image)
+Detection #1 (club, conf=0.867427):
+  Box coords (x,y,w,h): 388.8,6.7,46.9,39.3
+  Center point: (412.230377,26.377359)
+  Normalized center: (0.936887,0.048847)
+  Box size ratios (w,h): 0.106607,0.072727
+  Box area: 1842.2 pixels (0.775322% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 116 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 140.91 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.865189):
+  Box coords (x,y,w,h): 398.0,76.6,22.9,20.1
+  Center point: (409.467773,86.665924)
+  Normalized center: (0.930609,0.160492)
+  Box size ratios (w,h): 0.052109,0.037153
+  Box area: 460.0 pixels (0.193603% of image)
+Detection #1 (club, conf=0.842112):
+  Box coords (x,y,w,h): 390.1,53.8,48.7,38.4
+  Center point: (414.460785,72.995209)
+  Normalized center: (0.941956,0.135176)
+  Box size ratios (w,h): 0.110705,0.071064
+  Box area: 1869.2 pixels (0.786709% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 117 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.29 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.860004):
+  Box coords (x,y,w,h): 395.6,85.5,23.8,20.8
+  Center point: (407.460938,95.868317)
+  Normalized center: (0.926048,0.177534)
+  Box size ratios (w,h): 0.054103,0.038566
+  Box area: 495.8 pixels (0.208652% of image)
+Detection #1 (club, conf=0.834495):
+  Box coords (x,y,w,h): 392.4,90.5,50.7,40.8
+  Center point: (417.817505,110.874130)
+  Normalized center: (0.949585,0.205322)
+  Box size ratios (w,h): 0.115325,0.075528
+  Box area: 2069.5 pixels (0.871020% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 118 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 139.18 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.885077):
+  Box coords (x,y,w,h): 391.4,99.9,24.6,21.8
+  Center point: (403.676331,110.777054)
+  Normalized center: (0.917446,0.205143)
+  Box size ratios (w,h): 0.055796,0.040352
+  Box area: 534.9 pixels (0.225145% of image)
+Detection #1 (club, conf=0.870968):
+  Box coords (x,y,w,h): 400.2,125.3,49.4,40.0
+  Center point: (424.872681,145.255692)
+  Normalized center: (0.965620,0.268992)
+  Box size ratios (w,h): 0.112177,0.073983
+  Box area: 1971.9 pixels (0.829920% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 119 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 116.29 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.889474):
+  Box coords (x,y,w,h): 387.1,115.3,25.8,22.2
+  Center point: (399.998291,126.361725)
+  Normalized center: (0.909087,0.234003)
+  Box size ratios (w,h): 0.058623,0.041106
+  Box area: 572.6 pixels (0.240979% of image)
+Detection #1 (club, conf=0.868124):
+  Box coords (x,y,w,h): 407.2,159.3,49.2,38.7
+  Center point: (431.768860,178.630814)
+  Normalized center: (0.981293,0.330798)
+  Box size ratios (w,h): 0.111707,0.071597
+  Box area: 1900.3 pixels (0.799794% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 120 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.99 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.890810):
+  Box coords (x,y,w,h): 382.8,131.0,26.2,22.8
+  Center point: (395.910675,142.369293)
+  Normalized center: (0.899797,0.263647)
+  Box size ratios (w,h): 0.059554,0.042273
+  Box area: 598.2 pixels (0.251750% of image)
+Detection #1 (club, conf=0.873547):
+  Box coords (x,y,w,h): 414.8,194.6,50.3,36.1
+  Center point: (439.971130,212.651520)
+  Normalized center: (0.999934,0.393799)
+  Box size ratios (w,h): 0.114296,0.066901
+  Box area: 1816.8 pixels (0.764655% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 121 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 143.65 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.897342):
+  Box coords (x,y,w,h): 378.0,147.6,27.3,23.4
+  Center point: (391.615601,159.274689)
+  Normalized center: (0.890035,0.294953)
+  Box size ratios (w,h): 0.062013,0.043273
+  Box area: 637.6 pixels (0.268348% of image)
+Detection #1 (club, conf=0.876064):
+  Box coords (x,y,w,h): 424.5,230.5,51.2,33.6
+  Center point: (450.049805,247.318207)
+  Normalized center: (1.022840,0.457997)
+  Box size ratios (w,h): 0.116314,0.062133
+  Box area: 1717.1 pixels (0.722700% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 122 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 113.87 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.899916):
+  Box coords (x,y,w,h): 373.5,165.3,27.9,23.6
+  Center point: (387.407471,177.057678)
+  Normalized center: (0.880472,0.327885)
+  Box size ratios (w,h): 0.063360,0.043668
+  Box area: 657.4 pixels (0.276679% of image)
+Detection #1 (club, conf=0.879962):
+  Box coords (x,y,w,h): 436.3,265.2,52.9,33.0
+  Center point: (462.706909,281.729797)
+  Normalized center: (1.051607,0.521722)
+  Box size ratios (w,h): 0.120219,0.061096
+  Box area: 1745.1 pixels (0.734484% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 123 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 110.68 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.898277):
+  Box coords (x,y,w,h): 368.4,183.4,29.0,24.7
+  Center point: (382.901306,195.761993)
+  Normalized center: (0.870230,0.362522)
+  Box size ratios (w,h): 0.065865,0.045814
+  Box area: 717.0 pixels (0.301753% of image)
+Detection #1 (club, conf=0.860924):
+  Box coords (x,y,w,h): 450.4,297.5,53.6,33.5
+  Center point: (477.213623,314.250122)
+  Normalized center: (1.084576,0.581945)
+  Box size ratios (w,h): 0.121896,0.061998
+  Box area: 1795.6 pixels (0.755729% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 124 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 142.09 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.902073):
+  Box coords (x,y,w,h): 362.7,202.7,30.0,25.1
+  Center point: (377.724121,215.280487)
+  Normalized center: (0.858464,0.398668)
+  Box size ratios (w,h): 0.068250,0.046546
+  Box area: 754.8 pixels (0.317676% of image)
+Detection #1 (club, conf=0.859421):
+  Box coords (x,y,w,h): 466.6,327.8,56.1,35.4
+  Center point: (494.654449,345.486053)
+  Normalized center: (1.124215,0.639789)
+  Box size ratios (w,h): 0.127464,0.065487
+  Box area: 1983.3 pixels (0.834722% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 125 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 171.43 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.899079):
+  Box coords (x,y,w,h): 357.1,222.8,31.3,26.1
+  Center point: (372.739105,235.821503)
+  Normalized center: (0.847134,0.436706)
+  Box size ratios (w,h): 0.071060,0.048334
+  Box area: 816.1 pixels (0.343464% of image)
+Detection #1 (club, conf=0.859954):
+  Box coords (x,y,w,h): 485.6,357.9,56.6,35.0
+  Center point: (513.850403,375.428833)
+  Normalized center: (1.167842,0.695239)
+  Box size ratios (w,h): 0.128632,0.064872
+  Box area: 1982.7 pixels (0.834460% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 126 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 284.68 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.901031):
+  Box coords (x,y,w,h): 351.1,244.5,31.8,26.5
+  Center point: (367.061157,257.769104)
+  Normalized center: (0.834230,0.477350)
+  Box size ratios (w,h): 0.072336,0.049035
+  Box area: 842.8 pixels (0.354694% of image)
+Detection #1 (club, conf=0.870525):
+  Box coords (x,y,w,h): 506.7,385.6,58.4,37.2
+  Center point: (535.871826,404.190002)
+  Normalized center: (1.217891,0.748500)
+  Box size ratios (w,h): 0.132686,0.068883
+  Box area: 2171.6 pixels (0.913981% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 127 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 140.66 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.904599):
+  Box coords (x,y,w,h): 345.0,267.1,32.5,27.3
+  Center point: (361.239441,280.714905)
+  Normalized center: (0.820999,0.519842)
+  Box size ratios (w,h): 0.073763,0.050480
+  Box area: 884.7 pixels (0.372356% of image)
+Detection #1 (club, conf=0.862502):
+  Box coords (x,y,w,h): 531.9,414.5,56.2,37.2
+  Center point: (559.934021,433.141968)
+  Normalized center: (1.272577,0.802115)
+  Box size ratios (w,h): 0.127623,0.068944
+  Box area: 2090.6 pixels (0.879885% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 128 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 108.66 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.911609):
+  Box coords (x,y,w,h): 337.8,291.2,33.7,28.2
+  Center point: (354.682861,305.302124)
+  Normalized center: (0.806097,0.565374)
+  Box size ratios (w,h): 0.076612,0.052313
+  Box area: 952.3 pixels (0.400784% of image)
+Detection #1 (club, conf=0.849574):
+  Box coords (x,y,w,h): 558.0,441.3,57.3,38.7
+  Center point: (586.659912,460.638672)
+  Normalized center: (1.333318,0.853035)
+  Box size ratios (w,h): 0.130298,0.071750
+  Box area: 2221.3 pixels (0.934892% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 129 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 117.26 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.901893):
+  Box coords (x,y,w,h): 330.8,316.4,34.7,29.2
+  Center point: (348.118347,330.969666)
+  Normalized center: (0.791178,0.612907)
+  Box size ratios (w,h): 0.078786,0.054017
+  Box area: 1011.2 pixels (0.425574% of image)
+Detection #1 (club, conf=0.872515):
+  Box coords (x,y,w,h): 587.3,466.7,52.3,39.7
+  Center point: (613.445190,486.580261)
+  Normalized center: (1.394194,0.901075)
+  Box size ratios (w,h): 0.118793,0.073506
+  Box area: 2074.7 pixels (0.873206% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 130 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 122.60 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 2
+Detection #0 (ball, conf=0.906010):
+  Box coords (x,y,w,h): 322.8,343.4,36.1,30.0
+  Center point: (340.829773,358.386963)
+  Normalized center: (0.774613,0.663680)
+  Box size ratios (w,h): 0.082095,0.055599
+  Box area: 1084.5 pixels (0.456436% of image)
+Detection #1 (club, conf=0.753803):
+  Box coords (x,y,w,h): 619.1,487.5,20.8,44.5
+  Center point: (629.523071,509.741211)
+  Normalized center: (1.430734,0.943965)
+  Box size ratios (w,h): 0.047342,0.082318
+  Box area: 926.0 pixels (0.389712% of image)
+Drew 2 detections with confidence > 0.5
+
+================= FRAME 131 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 116.90 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.905867):
+  Box coords (x,y,w,h): 314.4,372.2,37.0,31.0
+  Center point: (332.910339,387.665558)
+  Normalized center: (0.756614,0.717899)
+  Box size ratios (w,h): 0.084103,0.057372
+  Box area: 1146.5 pixels (0.482517% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 132 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 147.25 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.907177):
+  Box coords (x,y,w,h): 305.1,402.9,38.5,32.2
+  Center point: (324.380554,418.968994)
+  Normalized center: (0.737229,0.775869)
+  Box size ratios (w,h): 0.087523,0.059560
+  Box area: 1238.6 pixels (0.521284% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 133 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 119.98 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.903836):
+  Box coords (x,y,w,h): 295.3,435.6,39.9,33.6
+  Center point: (315.217072,452.352112)
+  Normalized center: (0.716402,0.837689)
+  Box size ratios (w,h): 0.090689,0.062147
+  Box area: 1339.1 pixels (0.563607% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 134 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 119.99 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.904745):
+  Box coords (x,y,w,h): 284.0,470.7,41.6,35.3
+  Center point: (304.855774,488.418091)
+  Normalized center: (0.692854,0.904478)
+  Box size ratios (w,h): 0.094607,0.065443
+  Box area: 1471.1 pixels (0.619141% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 135 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 146.36 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.903701):
+  Box coords (x,y,w,h): 272.4,508.8,42.8,36.9
+  Center point: (293.841370,527.255875)
+  Normalized center: (0.667821,0.976400)
+  Box size ratios (w,h): 0.097312,0.068420
+  Box area: 1582.0 pixels (0.665812% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 136 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 117.09 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.907842):
+  Box coords (x,y,w,h): 259.6,549.6,44.3,38.8
+  Center point: (281.751251,568.996948)
+  Normalized center: (0.640344,1.053698)
+  Box size ratios (w,h): 0.100757,0.071773
+  Box area: 1718.2 pixels (0.723160% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 137 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 146.91 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 1
+Detection #0 (ball, conf=0.909956):
+  Box coords (x,y,w,h): 245.3,594.3,46.7,41.1
+  Center point: (268.611298,614.815857)
+  Normalized center: (0.610480,1.138548)
+  Box size ratios (w,h): 0.106181,0.076071
+  Box area: 1919.2 pixels (0.807727% of image)
+Drew 1 detections with confidence > 0.5
+
+================= FRAME 138 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 142.13 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 139 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 140.61 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 140 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 137.90 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 141 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 117.88 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 142 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 108.05 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 143 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.29 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 144 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.07 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 145 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 136.79 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 146 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 140.81 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 147 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 148.51 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 148 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 145.25 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 149 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 116.38 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 150 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 145.04 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 151 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.75 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 152 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 116.90 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 153 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 106.59 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 154 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 108.33 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 155 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 109.15 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 156 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.11 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 157 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 111.71 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 158 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 115.56 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 159 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 134.90 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 160 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 109.22 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 161 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 121.32 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 162 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 149.46 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 163 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 112.87 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 164 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 113.67 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 165 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 138.89 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 166 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 125.41 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 167 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 114.20 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 168 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 115.66 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 169 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 120.42 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 170 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 142.81 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 171 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 140.79 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 172 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 152.22 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 173 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 139.20 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 174 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.81 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 175 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.96 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 176 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 116.88 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 177 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 121.06 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 178 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 105.27 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 179 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 113.84 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 180 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 144.13 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 181 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 133.34 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 182 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.62 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 183 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 128.21 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 184 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 106.57 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 185 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 104.81 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 186 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 108.53 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 187 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 152.63 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 188 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 141.49 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 189 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 155.95 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 190 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 136.95 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 191 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 146.96 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 192 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 129.23 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 193 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 138.88 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 194 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 117.41 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 195 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 110.15 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 196 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 119.55 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 197 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 111.09 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 198 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 118.41 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 199 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 107.99 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 200 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 133.27 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 201 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 149.11 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 202 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 143.74 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 203 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 169.81 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+
+================= FRAME 204 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+Resizing image to model input dimensions: 640x640
+Inference time: 156.25 ms
+Output shapes: [(1, 300, 6)]
+---------------- DETECTION DETAILS ----------------
+Raw detection shape: (1, 300, 6)
+Total detections: 0
+Drew 0 detections with confidence > 0.5
+Video processing complete. Output saved to: i58-onnx-output.avi

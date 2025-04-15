@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -Wall -O2 -std=c++17 -O3 -DNDEBUG -shared -Wl,-soname,libbytetrack.so -o libbytetrack.so CMakeFiles/bytetrack.dir/src/BYTETracker.cpp.o CMakeFiles/bytetrack.dir/src/KalmanFilter.cpp.o CMakeFiles/bytetrack.dir/src/lapjv.cpp.o CMakeFiles/bytetrack.dir/src/Object.cpp.o CMakeFiles/bytetrack.dir/src/Rect.cpp.o CMakeFiles/bytetrack.dir/src/STrack.cpp.o 

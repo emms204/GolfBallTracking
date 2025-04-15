@@ -1,0 +1,2265 @@
+=== Python YOLO Object Detector ===
+Time: 2025-04-14 01:03:42
+Video: videos/i58-Master-1.avi
+Model: TrainResults3/best.pt
+Camera: master
+Calibration: stereo_calibration/calibration_results/master_calibration_8mm.npz
+Loaded YOLO model: TrainResults3/best.pt
+Loaded NPZ calibration from stereo_calibration/calibration_results/master_calibration_8mm.npz
+Available keys in calibration file: ['camera_matrix', 'dist_coeffs', 'rvecs', 'tvecs']
+Loaded camera matrix: [[     1066.8           0      517.52]
+ [          0      1070.1      173.92]
+ [          0           0           1]]
+Loaded distortion coefficients: [[   -0.51023     0.18677    0.010708   -0.025619    0.098934]]
+Will create undistortion maps dynamically
+Video info: 440x540, 400.0 fps, 205 frames
+Created undistortion maps
+
+================= FRAME 0 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889797):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.090103,72.581871)
+  Normalized center: (0.638841,0.134411)
+  Box size ratios (w,h): 0.038770,0.031438
+  Box area: 289.6 pixels (0.121887% of image)
+  Track ID: 1
+
+================= FRAME 1 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888979):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.115936,72.602085)
+  Normalized center: (0.638900,0.134448)
+  Box size ratios (w,h): 0.038769,0.031438
+  Box area: 289.6 pixels (0.121883% of image)
+  Track ID: 1
+
+================= FRAME 2 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890168):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.102173,72.630745)
+  Normalized center: (0.638869,0.134501)
+  Box size ratios (w,h): 0.038867,0.031523
+  Box area: 291.1 pixels (0.122522% of image)
+  Track ID: 1
+
+================= FRAME 3 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889093):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.118134,72.614265)
+  Normalized center: (0.638905,0.134471)
+  Box size ratios (w,h): 0.038961,0.031603
+  Box area: 292.6 pixels (0.123129% of image)
+  Track ID: 1
+
+================= FRAME 4 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888669):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.1
+  Center point: (281.130539,72.605282)
+  Normalized center: (0.638933,0.134454)
+  Box size ratios (w,h): 0.038976,0.031621
+  Box area: 292.8 pixels (0.123249% of image)
+  Track ID: 1
+
+================= FRAME 5 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888990):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.1
+  Center point: (281.122009,72.615055)
+  Normalized center: (0.638914,0.134472)
+  Box size ratios (w,h): 0.038919,0.031579
+  Box area: 292.0 pixels (0.122902% of image)
+  Track ID: 1
+
+================= FRAME 6 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888624):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.113998,72.622444)
+  Normalized center: (0.638895,0.134486)
+  Box size ratios (w,h): 0.038941,0.031599
+  Box area: 292.4 pixels (0.123050% of image)
+  Track ID: 1
+
+================= FRAME 7 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890142):
+  Box coords (x,y,w,h): 272.6,64.2,17.0,17.0
+  Center point: (281.121765,72.638073)
+  Normalized center: (0.638913,0.134515)
+  Box size ratios (w,h): 0.038694,0.031391
+  Box area: 288.6 pixels (0.121468% of image)
+  Track ID: 1
+
+================= FRAME 8 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890533):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.107834,72.634594)
+  Normalized center: (0.638881,0.134509)
+  Box size ratios (w,h): 0.038860,0.031536
+  Box area: 291.2 pixels (0.122550% of image)
+  Track ID: 1
+
+================= FRAME 9 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889217):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.092117,72.607769)
+  Normalized center: (0.638846,0.134459)
+  Box size ratios (w,h): 0.038904,0.031572
+  Box area: 291.8 pixels (0.122827% of image)
+  Track ID: 1
+
+================= FRAME 10 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889901):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.073929,72.631241)
+  Normalized center: (0.638804,0.134502)
+  Box size ratios (w,h): 0.038865,0.031547
+  Box area: 291.3 pixels (0.122605% of image)
+  Track ID: 1
+
+================= FRAME 11 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889876):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.067062,72.645237)
+  Normalized center: (0.638789,0.134528)
+  Box size ratios (w,h): 0.038814,0.031504
+  Box area: 290.5 pixels (0.122280% of image)
+  Track ID: 1
+
+================= FRAME 12 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889595):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.069366,72.642021)
+  Normalized center: (0.638794,0.134522)
+  Box size ratios (w,h): 0.038901,0.031579
+  Box area: 291.9 pixels (0.122845% of image)
+  Track ID: 1
+
+================= FRAME 13 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888847):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.106598,72.638279)
+  Normalized center: (0.638879,0.134515)
+  Box size ratios (w,h): 0.038857,0.031552
+  Box area: 291.3 pixels (0.122603% of image)
+  Track ID: 1
+
+================= FRAME 14 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889246):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.104370,72.597107)
+  Normalized center: (0.638874,0.134439)
+  Box size ratios (w,h): 0.038870,0.031560
+  Box area: 291.5 pixels (0.122674% of image)
+  Track ID: 1
+
+================= FRAME 15 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889721):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.104294,72.598843)
+  Normalized center: (0.638873,0.134442)
+  Box size ratios (w,h): 0.038887,0.031573
+  Box area: 291.7 pixels (0.122780% of image)
+  Track ID: 1
+
+================= FRAME 16 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889873):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.106079,72.590603)
+  Normalized center: (0.638877,0.134427)
+  Box size ratios (w,h): 0.038880,0.031567
+  Box area: 291.6 pixels (0.122734% of image)
+  Track ID: 1
+
+================= FRAME 17 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889221):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.126114,72.635670)
+  Normalized center: (0.638923,0.134510)
+  Box size ratios (w,h): 0.038881,0.031569
+  Box area: 291.6 pixels (0.122745% of image)
+  Track ID: 1
+
+================= FRAME 18 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889253):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.107758,72.622169)
+  Normalized center: (0.638881,0.134485)
+  Box size ratios (w,h): 0.038800,0.031501
+  Box area: 290.4 pixels (0.122225% of image)
+  Track ID: 1
+
+================= FRAME 19 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888730):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.110275,72.614471)
+  Normalized center: (0.638887,0.134471)
+  Box size ratios (w,h): 0.038794,0.031494
+  Box area: 290.3 pixels (0.122177% of image)
+  Track ID: 1
+
+================= FRAME 20 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890088):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.087112,72.603519)
+  Normalized center: (0.638834,0.134451)
+  Box size ratios (w,h): 0.038850,0.031534
+  Box area: 291.1 pixels (0.122510% of image)
+  Track ID: 1
+
+================= FRAME 21 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890322):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.114029,72.635071)
+  Normalized center: (0.638896,0.134509)
+  Box size ratios (w,h): 0.038950,0.031627
+  Box area: 292.7 pixels (0.123186% of image)
+  Track ID: 1
+
+================= FRAME 22 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890132):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.090775,72.605843)
+  Normalized center: (0.638843,0.134455)
+  Box size ratios (w,h): 0.038951,0.031632
+  Box area: 292.7 pixels (0.123207% of image)
+  Track ID: 1
+
+================= FRAME 23 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889404):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.095337,72.588760)
+  Normalized center: (0.638853,0.134424)
+  Box size ratios (w,h): 0.038879,0.031569
+  Box area: 291.6 pixels (0.122737% of image)
+  Track ID: 1
+
+================= FRAME 24 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889688):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.074310,72.584087)
+  Normalized center: (0.638805,0.134415)
+  Box size ratios (w,h): 0.038777,0.031480
+  Box area: 290.0 pixels (0.122070% of image)
+  Track ID: 1
+
+================= FRAME 25 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890049):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.103348,72.601639)
+  Normalized center: (0.638871,0.134447)
+  Box size ratios (w,h): 0.038774,0.031474
+  Box area: 290.0 pixels (0.122038% of image)
+  Track ID: 1
+
+================= FRAME 26 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889434):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.117386,72.622993)
+  Normalized center: (0.638903,0.134487)
+  Box size ratios (w,h): 0.038851,0.031540
+  Box area: 291.1 pixels (0.122536% of image)
+  Track ID: 1
+
+================= FRAME 27 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889050):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.111832,72.632820)
+  Normalized center: (0.638891,0.134505)
+  Box size ratios (w,h): 0.038852,0.031532
+  Box area: 291.1 pixels (0.122507% of image)
+  Track ID: 1
+
+================= FRAME 28 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888582):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.110138,72.623543)
+  Normalized center: (0.638887,0.134488)
+  Box size ratios (w,h): 0.038912,0.031586
+  Box area: 292.0 pixels (0.122907% of image)
+  Track ID: 1
+
+================= FRAME 29 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889644):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.114075,72.623528)
+  Normalized center: (0.638896,0.134488)
+  Box size ratios (w,h): 0.038890,0.031568
+  Box area: 291.7 pixels (0.122768% of image)
+  Track ID: 1
+
+================= FRAME 30 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888126):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.112213,72.620926)
+  Normalized center: (0.638891,0.134483)
+  Box size ratios (w,h): 0.038874,0.031563
+  Box area: 291.5 pixels (0.122699% of image)
+  Track ID: 1
+
+================= FRAME 31 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888777):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.100906,72.639683)
+  Normalized center: (0.638866,0.134518)
+  Box size ratios (w,h): 0.038882,0.031572
+  Box area: 291.7 pixels (0.122757% of image)
+  Track ID: 1
+
+================= FRAME 32 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888066):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.082108,72.623623)
+  Normalized center: (0.638823,0.134488)
+  Box size ratios (w,h): 0.038818,0.031516
+  Box area: 290.7 pixels (0.122337% of image)
+  Track ID: 1
+
+================= FRAME 33 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890503):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.089905,72.621708)
+  Normalized center: (0.638841,0.134485)
+  Box size ratios (w,h): 0.038951,0.031624
+  Box area: 292.7 pixels (0.123177% of image)
+  Track ID: 1
+
+================= FRAME 34 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888641):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.090210,72.644951)
+  Normalized center: (0.638841,0.134528)
+  Box size ratios (w,h): 0.038890,0.031573
+  Box area: 291.7 pixels (0.122787% of image)
+  Track ID: 1
+
+================= FRAME 35 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888987):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.087341,72.630665)
+  Normalized center: (0.638835,0.134501)
+  Box size ratios (w,h): 0.038816,0.031519
+  Box area: 290.7 pixels (0.122345% of image)
+  Track ID: 1
+
+================= FRAME 36 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888875):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.107285,72.627880)
+  Normalized center: (0.638880,0.134496)
+  Box size ratios (w,h): 0.038794,0.031496
+  Box area: 290.3 pixels (0.122184% of image)
+  Track ID: 1
+
+================= FRAME 37 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888586):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.102417,72.606327)
+  Normalized center: (0.638869,0.134456)
+  Box size ratios (w,h): 0.038867,0.031558
+  Box area: 291.4 pixels (0.122657% of image)
+  Track ID: 1
+
+================= FRAME 38 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889517):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.090332,72.608311)
+  Normalized center: (0.638842,0.134460)
+  Box size ratios (w,h): 0.038794,0.031490
+  Box area: 290.3 pixels (0.122164% of image)
+  Track ID: 1
+
+================= FRAME 39 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888333):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.069672,72.623665)
+  Normalized center: (0.638795,0.134488)
+  Box size ratios (w,h): 0.038804,0.031499
+  Box area: 290.4 pixels (0.122229% of image)
+  Track ID: 1
+
+================= FRAME 40 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889482):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.066513,72.617966)
+  Normalized center: (0.638788,0.134478)
+  Box size ratios (w,h): 0.038787,0.031477
+  Box area: 290.1 pixels (0.122088% of image)
+  Track ID: 1
+
+================= FRAME 41 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888336):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.070801,72.610878)
+  Normalized center: (0.638797,0.134465)
+  Box size ratios (w,h): 0.038878,0.031553
+  Box area: 291.5 pixels (0.122672% of image)
+  Track ID: 1
+
+================= FRAME 42 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890448):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.084442,72.621002)
+  Normalized center: (0.638828,0.134483)
+  Box size ratios (w,h): 0.038825,0.031508
+  Box area: 290.7 pixels (0.122331% of image)
+  Track ID: 1
+
+================= FRAME 43 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890773):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.063126,72.596718)
+  Normalized center: (0.638780,0.134438)
+  Box size ratios (w,h): 0.038927,0.031601
+  Box area: 292.3 pixels (0.123012% of image)
+  Track ID: 1
+
+================= FRAME 44 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889643):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.068176,72.607327)
+  Normalized center: (0.638791,0.134458)
+  Box size ratios (w,h): 0.038880,0.031574
+  Box area: 291.7 pixels (0.122758% of image)
+  Track ID: 1
+
+================= FRAME 45 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889722):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.096085,72.591785)
+  Normalized center: (0.638855,0.134429)
+  Box size ratios (w,h): 0.038812,0.031521
+  Box area: 290.7 pixels (0.122337% of image)
+  Track ID: 1
+
+================= FRAME 46 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889708):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.085861,72.588924)
+  Normalized center: (0.638832,0.134424)
+  Box size ratios (w,h): 0.038858,0.031553
+  Box area: 291.3 pixels (0.122609% of image)
+  Track ID: 1
+
+================= FRAME 47 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888990):
+  Box coords (x,y,w,h): 272.6,64.1,17.1,17.0
+  Center point: (281.098175,72.585335)
+  Normalized center: (0.638859,0.134417)
+  Box size ratios (w,h): 0.038855,0.031556
+  Box area: 291.3 pixels (0.122608% of image)
+  Track ID: 1
+
+================= FRAME 48 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889464):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.072327,72.596996)
+  Normalized center: (0.638801,0.134439)
+  Box size ratios (w,h): 0.038766,0.031485
+  Box area: 290.0 pixels (0.122055% of image)
+  Track ID: 1
+
+================= FRAME 49 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889046):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.077744,72.606041)
+  Normalized center: (0.638813,0.134456)
+  Box size ratios (w,h): 0.038776,0.031490
+  Box area: 290.1 pixels (0.122107% of image)
+  Track ID: 1
+
+================= FRAME 50 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889067):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.053772,72.619278)
+  Normalized center: (0.638759,0.134480)
+  Box size ratios (w,h): 0.038833,0.031542
+  Box area: 291.0 pixels (0.122487% of image)
+  Track ID: 1
+
+================= FRAME 51 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890156):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.068130,72.617825)
+  Normalized center: (0.638791,0.134477)
+  Box size ratios (w,h): 0.038842,0.031554
+  Box area: 291.2 pixels (0.122563% of image)
+  Track ID: 1
+
+================= FRAME 52 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888257):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.069366,72.614075)
+  Normalized center: (0.638794,0.134471)
+  Box size ratios (w,h): 0.038849,0.031561
+  Box area: 291.3 pixels (0.122614% of image)
+  Track ID: 1
+
+================= FRAME 53 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889142):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.060043,72.635040)
+  Normalized center: (0.638773,0.134509)
+  Box size ratios (w,h): 0.038905,0.031608
+  Box area: 292.2 pixels (0.122972% of image)
+  Track ID: 1
+
+================= FRAME 54 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889170):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.066010,72.610744)
+  Normalized center: (0.638786,0.134464)
+  Box size ratios (w,h): 0.038775,0.031499
+  Box area: 290.2 pixels (0.122138% of image)
+  Track ID: 1
+
+================= FRAME 55 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889219):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.022079,72.636608)
+  Normalized center: (0.638687,0.134512)
+  Box size ratios (w,h): 0.038783,0.031497
+  Box area: 290.2 pixels (0.122154% of image)
+  Track ID: 1
+
+================= FRAME 56 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890354):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.049271,72.639431)
+  Normalized center: (0.638748,0.134517)
+  Box size ratios (w,h): 0.038855,0.031550
+  Box area: 291.3 pixels (0.122588% of image)
+  Track ID: 1
+
+================= FRAME 57 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888958):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.045715,72.650253)
+  Normalized center: (0.638740,0.134538)
+  Box size ratios (w,h): 0.038882,0.031577
+  Box area: 291.7 pixels (0.122776% of image)
+  Track ID: 1
+
+================= FRAME 58 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889783):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.068893,72.619347)
+  Normalized center: (0.638793,0.134480)
+  Box size ratios (w,h): 0.038920,0.031617
+  Box area: 292.4 pixels (0.123054% of image)
+  Track ID: 1
+
+================= FRAME 59 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889785):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.067520,72.613907)
+  Normalized center: (0.638790,0.134470)
+  Box size ratios (w,h): 0.038855,0.031567
+  Box area: 291.4 pixels (0.122654% of image)
+  Track ID: 1
+
+================= FRAME 60 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889092):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.047195,72.617672)
+  Normalized center: (0.638744,0.134477)
+  Box size ratios (w,h): 0.038863,0.031578
+  Box area: 291.6 pixels (0.122722% of image)
+  Track ID: 1
+
+================= FRAME 61 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888502):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.040359,72.621117)
+  Normalized center: (0.638728,0.134484)
+  Box size ratios (w,h): 0.038860,0.031579
+  Box area: 291.6 pixels (0.122714% of image)
+  Track ID: 1
+
+================= FRAME 62 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889327):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.038010,72.636826)
+  Normalized center: (0.638723,0.134513)
+  Box size ratios (w,h): 0.038803,0.031532
+  Box area: 290.7 pixels (0.122353% of image)
+  Track ID: 1
+
+================= FRAME 63 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888522):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.020935,72.620354)
+  Normalized center: (0.638684,0.134482)
+  Box size ratios (w,h): 0.038943,0.031644
+  Box area: 292.8 pixels (0.123233% of image)
+  Track ID: 1
+
+================= FRAME 64 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889074):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.032455,72.641006)
+  Normalized center: (0.638710,0.134520)
+  Box size ratios (w,h): 0.038832,0.031544
+  Box area: 291.0 pixels (0.122494% of image)
+  Track ID: 1
+
+================= FRAME 65 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.891143):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.037827,72.623219)
+  Normalized center: (0.638722,0.134487)
+  Box size ratios (w,h): 0.038863,0.031571
+  Box area: 291.5 pixels (0.122692% of image)
+  Track ID: 1
+
+================= FRAME 66 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889654):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.039444,72.622471)
+  Normalized center: (0.638726,0.134486)
+  Box size ratios (w,h): 0.038883,0.031587
+  Box area: 291.8 pixels (0.122822% of image)
+  Track ID: 1
+
+================= FRAME 67 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889770):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.053101,72.615562)
+  Normalized center: (0.638757,0.134473)
+  Box size ratios (w,h): 0.038793,0.031519
+  Box area: 290.5 pixels (0.122274% of image)
+  Track ID: 1
+
+================= FRAME 68 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.891447):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.028458,72.615650)
+  Normalized center: (0.638701,0.134473)
+  Box size ratios (w,h): 0.038841,0.031557
+  Box area: 291.2 pixels (0.122570% of image)
+  Track ID: 1
+
+================= FRAME 69 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889239):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.032166,72.647934)
+  Normalized center: (0.638709,0.134533)
+  Box size ratios (w,h): 0.038839,0.031550
+  Box area: 291.1 pixels (0.122536% of image)
+  Track ID: 1
+
+================= FRAME 70 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889548):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.026276,72.662289)
+  Normalized center: (0.638696,0.134560)
+  Box size ratios (w,h): 0.038824,0.031527
+  Box area: 290.8 pixels (0.122398% of image)
+  Track ID: 1
+
+================= FRAME 71 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890716):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.022186,72.651859)
+  Normalized center: (0.638687,0.134540)
+  Box size ratios (w,h): 0.038790,0.031506
+  Box area: 290.4 pixels (0.122209% of image)
+  Track ID: 1
+
+================= FRAME 72 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888114):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.007034,72.645138)
+  Normalized center: (0.638652,0.134528)
+  Box size ratios (w,h): 0.038860,0.031571
+  Box area: 291.5 pixels (0.122684% of image)
+  Track ID: 1
+
+================= FRAME 73 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890619):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.021179,72.641308)
+  Normalized center: (0.638684,0.134521)
+  Box size ratios (w,h): 0.038886,0.031588
+  Box area: 291.9 pixels (0.122833% of image)
+  Track ID: 1
+
+================= FRAME 74 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890574):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.066010,72.603466)
+  Normalized center: (0.638786,0.134451)
+  Box size ratios (w,h): 0.038879,0.031585
+  Box area: 291.8 pixels (0.122799% of image)
+  Track ID: 1
+
+================= FRAME 75 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889042):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.051224,72.613529)
+  Normalized center: (0.638753,0.134469)
+  Box size ratios (w,h): 0.038867,0.031574
+  Box area: 291.6 pixels (0.122719% of image)
+  Track ID: 1
+
+================= FRAME 76 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888813):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.067886,72.642406)
+  Normalized center: (0.638791,0.134523)
+  Box size ratios (w,h): 0.038893,0.031594
+  Box area: 292.0 pixels (0.122879% of image)
+  Track ID: 1
+
+================= FRAME 77 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889706):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.024399,72.639626)
+  Normalized center: (0.638692,0.134518)
+  Box size ratios (w,h): 0.038801,0.031515
+  Box area: 290.5 pixels (0.122280% of image)
+  Track ID: 1
+
+================= FRAME 78 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889691):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.041275,72.678375)
+  Normalized center: (0.638730,0.134590)
+  Box size ratios (w,h): 0.038829,0.031546
+  Box area: 291.0 pixels (0.122489% of image)
+  Track ID: 1
+
+================= FRAME 79 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890667):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.045776,72.674248)
+  Normalized center: (0.638740,0.134582)
+  Box size ratios (w,h): 0.038854,0.031557
+  Box area: 291.3 pixels (0.122613% of image)
+  Track ID: 1
+
+================= FRAME 80 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889727):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.034088,72.667664)
+  Normalized center: (0.638714,0.134570)
+  Box size ratios (w,h): 0.038854,0.031555
+  Box area: 291.3 pixels (0.122603% of image)
+  Track ID: 1
+
+================= FRAME 81 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889418):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.046570,72.626389)
+  Normalized center: (0.638742,0.134493)
+  Box size ratios (w,h): 0.038869,0.031566
+  Box area: 291.5 pixels (0.122692% of image)
+  Track ID: 1
+
+================= FRAME 82 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888731):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.036697,72.651516)
+  Normalized center: (0.638720,0.134540)
+  Box size ratios (w,h): 0.038819,0.031521
+  Box area: 290.7 pixels (0.122360% of image)
+  Track ID: 1
+
+================= FRAME 83 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889232):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.051926,72.632168)
+  Normalized center: (0.638754,0.134504)
+  Box size ratios (w,h): 0.038843,0.031541
+  Box area: 291.1 pixels (0.122514% of image)
+  Track ID: 1
+
+================= FRAME 84 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889753):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.034439,72.604763)
+  Normalized center: (0.638715,0.134453)
+  Box size ratios (w,h): 0.038874,0.031565
+  Box area: 291.6 pixels (0.122707% of image)
+  Track ID: 1
+
+================= FRAME 85 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889277):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.052017,72.637669)
+  Normalized center: (0.638755,0.134514)
+  Box size ratios (w,h): 0.038799,0.031502
+  Box area: 290.4 pixels (0.122224% of image)
+  Track ID: 1
+
+================= FRAME 86 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889386):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.004501,72.641899)
+  Normalized center: (0.638647,0.134522)
+  Box size ratios (w,h): 0.038812,0.031513
+  Box area: 290.6 pixels (0.122310% of image)
+  Track ID: 1
+
+================= FRAME 87 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889067):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.1
+  Center point: (281.015884,72.679688)
+  Normalized center: (0.638672,0.134592)
+  Box size ratios (w,h): 0.038902,0.031586
+  Box area: 292.0 pixels (0.122878% of image)
+  Track ID: 1
+
+================= FRAME 88 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889085):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.024277,72.663357)
+  Normalized center: (0.638692,0.134562)
+  Box size ratios (w,h): 0.038899,0.031585
+  Box area: 291.9 pixels (0.122862% of image)
+  Track ID: 1
+
+================= FRAME 89 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890323):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.027466,72.645542)
+  Normalized center: (0.638699,0.134529)
+  Box size ratios (w,h): 0.038882,0.031574
+  Box area: 291.7 pixels (0.122768% of image)
+  Track ID: 1
+
+================= FRAME 90 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.887887):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.0
+  Center point: (281.035461,72.651012)
+  Normalized center: (0.638717,0.134539)
+  Box size ratios (w,h): 0.038832,0.031531
+  Box area: 290.9 pixels (0.122441% of image)
+  Track ID: 1
+
+================= FRAME 91 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888125):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.038361,72.655010)
+  Normalized center: (0.638724,0.134546)
+  Box size ratios (w,h): 0.038772,0.031480
+  Box area: 290.0 pixels (0.122057% of image)
+  Track ID: 1
+
+================= FRAME 92 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890242):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.067932,72.683430)
+  Normalized center: (0.638791,0.134599)
+  Box size ratios (w,h): 0.038839,0.031529
+  Box area: 291.0 pixels (0.122457% of image)
+  Track ID: 1
+
+================= FRAME 93 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890590):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.052002,72.689125)
+  Normalized center: (0.638755,0.134609)
+  Box size ratios (w,h): 0.038794,0.031487
+  Box area: 290.2 pixels (0.122150% of image)
+  Track ID: 1
+
+================= FRAME 94 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890451):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.043152,72.710312)
+  Normalized center: (0.638734,0.134649)
+  Box size ratios (w,h): 0.038887,0.031557
+  Box area: 291.6 pixels (0.122717% of image)
+  Track ID: 1
+
+================= FRAME 95 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889383):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.044250,72.697365)
+  Normalized center: (0.638737,0.134625)
+  Box size ratios (w,h): 0.038807,0.031492
+  Box area: 290.4 pixels (0.122211% of image)
+  Track ID: 1
+
+================= FRAME 96 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.890570):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.004974,72.688133)
+  Normalized center: (0.638648,0.134608)
+  Box size ratios (w,h): 0.038841,0.031528
+  Box area: 291.0 pixels (0.122458% of image)
+  Track ID: 1
+
+================= FRAME 97 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889900):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.045364,72.679760)
+  Normalized center: (0.638739,0.134592)
+  Box size ratios (w,h): 0.038787,0.031476
+  Box area: 290.1 pixels (0.122084% of image)
+  Track ID: 1
+
+================= FRAME 98 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889058):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.1
+  Center point: (281.053955,72.684479)
+  Normalized center: (0.638759,0.134601)
+  Box size ratios (w,h): 0.038904,0.031577
+  Box area: 291.9 pixels (0.122846% of image)
+  Track ID: 1
+
+================= FRAME 99 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889396):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.054413,72.673218)
+  Normalized center: (0.638760,0.134580)
+  Box size ratios (w,h): 0.038828,0.031516
+  Box area: 290.8 pixels (0.122372% of image)
+  Track ID: 1
+
+================= FRAME 100 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.887990):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.066010,72.707020)
+  Normalized center: (0.638786,0.134643)
+  Box size ratios (w,h): 0.038828,0.031520
+  Box area: 290.8 pixels (0.122389% of image)
+  Track ID: 1
+
+================= FRAME 101 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889432):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.034302,72.691795)
+  Normalized center: (0.638714,0.134614)
+  Box size ratios (w,h): 0.038859,0.031545
+  Box area: 291.3 pixels (0.122582% of image)
+  Track ID: 1
+
+================= FRAME 102 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889392):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.067535,72.709137)
+  Normalized center: (0.638790,0.134647)
+  Box size ratios (w,h): 0.038876,0.031565
+  Box area: 291.6 pixels (0.122712% of image)
+  Track ID: 1
+
+================= FRAME 103 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888478):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.064377,72.715580)
+  Normalized center: (0.638783,0.134658)
+  Box size ratios (w,h): 0.038876,0.031565
+  Box area: 291.6 pixels (0.122713% of image)
+  Track ID: 1
+
+================= FRAME 104 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888546):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.062027,72.711624)
+  Normalized center: (0.638777,0.134651)
+  Box size ratios (w,h): 0.038808,0.031509
+  Box area: 290.5 pixels (0.122279% of image)
+  Track ID: 1
+
+================= FRAME 105 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.887982):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.048233,72.691845)
+  Normalized center: (0.638746,0.134615)
+  Box size ratios (w,h): 0.038796,0.031505
+  Box area: 290.4 pixels (0.122227% of image)
+  Track ID: 1
+
+================= FRAME 106 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888953):
+  Box coords (x,y,w,h): 272.5,64.1,17.1,17.1
+  Center point: (281.042603,72.684566)
+  Normalized center: (0.638733,0.134601)
+  Box size ratios (w,h): 0.038961,0.031635
+  Box area: 292.8 pixels (0.123252% of image)
+  Track ID: 1
+
+================= FRAME 107 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889048):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.050812,72.685440)
+  Normalized center: (0.638752,0.134603)
+  Box size ratios (w,h): 0.038857,0.031558
+  Box area: 291.4 pixels (0.122625% of image)
+  Track ID: 1
+
+================= FRAME 108 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888636):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.1
+  Center point: (281.067612,72.699409)
+  Normalized center: (0.638790,0.134629)
+  Box size ratios (w,h): 0.038873,0.031576
+  Box area: 291.6 pixels (0.122748% of image)
+  Track ID: 1
+
+================= FRAME 109 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888373):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.080627,72.711849)
+  Normalized center: (0.638820,0.134652)
+  Box size ratios (w,h): 0.038831,0.031545
+  Box area: 291.0 pixels (0.122493% of image)
+  Track ID: 1
+
+================= FRAME 110 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889465):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.063309,72.699810)
+  Normalized center: (0.638780,0.134629)
+  Box size ratios (w,h): 0.038853,0.031552
+  Box area: 291.3 pixels (0.122588% of image)
+  Track ID: 1
+
+================= FRAME 111 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889627):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.037384,72.718983)
+  Normalized center: (0.638721,0.134665)
+  Box size ratios (w,h): 0.038804,0.031505
+  Box area: 290.5 pixels (0.122255% of image)
+  Track ID: 1
+
+================= FRAME 112 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889112):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.064255,72.709320)
+  Normalized center: (0.638782,0.134647)
+  Box size ratios (w,h): 0.038788,0.031494
+  Box area: 290.3 pixels (0.122160% of image)
+  Track ID: 1
+
+================= FRAME 113 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.889728):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.052704,72.668369)
+  Normalized center: (0.638756,0.134571)
+  Box size ratios (w,h): 0.038793,0.031498
+  Box area: 290.3 pixels (0.122190% of image)
+  Track ID: 1
+
+================= FRAME 114 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.888251):
+  Box coords (x,y,w,h): 272.5,64.2,17.1,17.0
+  Center point: (281.035202,72.679607)
+  Normalized center: (0.638716,0.134592)
+  Box size ratios (w,h): 0.038858,0.031549
+  Box area: 291.3 pixels (0.122591% of image)
+  Track ID: 1
+
+================= FRAME 115 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.891399):
+  Box coords (x,y,w,h): 272.5,64.2,17.2,17.1
+  Center point: (281.071030,72.718746)
+  Normalized center: (0.638798,0.134664)
+  Box size ratios (w,h): 0.038990,0.031629
+  Box area: 293.0 pixels (0.123322% of image)
+  Track ID: 1
+
+================= FRAME 116 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.876691):
+  Box coords (x,y,w,h): 272.8,64.8,16.7,16.6
+  Center point: (281.093826,73.086140)
+  Normalized center: (0.638850,0.135345)
+  Box size ratios (w,h): 0.037925,0.030656
+  Box area: 276.2 pixels (0.116263% of image)
+  Track ID: 1
+
+================= FRAME 117 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.876316):
+  Box coords (x,y,w,h): 271.8,69.9,16.7,16.6
+  Center point: (280.215195,78.157787)
+  Normalized center: (0.636853,0.144737)
+  Box size ratios (w,h): 0.038027,0.030676
+  Box area: 277.2 pixels (0.116653% of image)
+  Track ID: 1
+
+================= FRAME 118 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.881107):
+  Box coords (x,y,w,h): 268.3,84.5,17.7,17.7
+  Center point: (277.165695,93.369507)
+  Normalized center: (0.629922,0.172906)
+  Box size ratios (w,h): 0.040275,0.032692
+  Box area: 312.8 pixels (0.131665% of image)
+Detection #1 (club, conf=0.874712):
+  Box coords (x,y,w,h): 274.7,106.3,33.9,32.8
+  Center point: (291.654602,122.755169)
+  Normalized center: (0.662851,0.227324)
+  Box size ratios (w,h): 0.076986,0.060826
+  Box area: 1112.6 pixels (0.468275% of image)
+
+================= FRAME 119 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.892102):
+  Box coords (x,y,w,h): 265.4,97.4,18.4,18.1
+  Center point: (274.591141,106.482315)
+  Normalized center: (0.624071,0.197189)
+  Box size ratios (w,h): 0.041721,0.033543
+  Box area: 332.5 pixels (0.139944% of image)
+Detection #1 (club, conf=0.874752):
+  Box coords (x,y,w,h): 279.2,134.6,34.7,32.2
+  Center point: (296.490417,150.707710)
+  Normalized center: (0.673842,0.279088)
+  Box size ratios (w,h): 0.078801,0.059667
+  Box area: 1117.2 pixels (0.470186% of image)
+
+================= FRAME 120 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (club, conf=0.888151):
+  Box coords (x,y,w,h): 284.2,164.4,35.8,30.4
+  Center point: (302.105606,179.645287)
+  Normalized center: (0.686604,0.332676)
+  Box size ratios (w,h): 0.081396,0.056283
+  Box area: 1088.5 pixels (0.458121% of image)
+Detection #1 (ball, conf=0.885336):
+  Box coords (x,y,w,h): 262.5,110.7,18.9,18.7
+  Center point: (271.966125,120.022255)
+  Normalized center: (0.618105,0.222263)
+  Box size ratios (w,h): 0.043057,0.034649
+  Box area: 354.5 pixels (0.149188% of image)
+
+================= FRAME 121 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.899404):
+  Box coords (x,y,w,h): 259.2,124.6,19.6,19.3
+  Center point: (268.984787,134.272739)
+  Normalized center: (0.611329,0.248653)
+  Box size ratios (w,h): 0.044436,0.035817
+  Box area: 378.2 pixels (0.159158% of image)
+Detection #1 (club, conf=0.882708):
+  Box coords (x,y,w,h): 291.1,194.6,36.1,28.2
+  Center point: (309.143860,208.655052)
+  Normalized center: (0.702600,0.386398)
+  Box size ratios (w,h): 0.081971,0.052158
+  Box area: 1015.9 pixels (0.427548% of image)
+
+================= FRAME 122 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.892512):
+  Box coords (x,y,w,h): 256.0,139.6,20.2,19.5
+  Center point: (266.068352,149.300621)
+  Normalized center: (0.604701,0.276483)
+  Box size ratios (w,h): 0.045916,0.036055
+  Box area: 393.3 pixels (0.165551% of image)
+Detection #1 (club, conf=0.882888):
+  Box coords (x,y,w,h): 299.4,224.1,36.3,27.1
+  Center point: (317.589890,237.675835)
+  Normalized center: (0.721795,0.440140)
+  Box size ratios (w,h): 0.082529,0.050159
+  Box area: 983.6 pixels (0.413960% of image)
+
+================= FRAME 123 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.884564):
+  Box coords (x,y,w,h): 252.4,155.0,20.7,20.1
+  Center point: (262.765816,165.027412)
+  Normalized center: (0.597195,0.305606)
+  Box size ratios (w,h): 0.047084,0.037234
+  Box area: 416.5 pixels (0.175312% of image)
+Detection #1 (club, conf=0.866957):
+  Box coords (x,y,w,h): 309.3,251.3,37.7,27.7
+  Center point: (328.091980,265.193497)
+  Normalized center: (0.745664,0.491099)
+  Box size ratios (w,h): 0.085602,0.051314
+  Box area: 1043.7 pixels (0.439262% of image)
+
+================= FRAME 124 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.896168):
+  Box coords (x,y,w,h): 248.7,171.2,21.4,20.7
+  Center point: (259.436806,181.518150)
+  Normalized center: (0.589629,0.336145)
+  Box size ratios (w,h): 0.048637,0.038333
+  Box area: 443.0 pixels (0.186438% of image)
+Detection #1 (club, conf=0.847346):
+  Box coords (x,y,w,h): 320.2,277.6,38.7,28.3
+  Center point: (339.571442,291.728119)
+  Normalized center: (0.771753,0.540237)
+  Box size ratios (w,h): 0.087917,0.052383
+  Box area: 1094.2 pixels (0.460540% of image)
+
+================= FRAME 125 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.893489):
+  Box coords (x,y,w,h): 244.8,188.2,22.1,21.4
+  Center point: (255.856346,198.923798)
+  Normalized center: (0.581492,0.368377)
+  Box size ratios (w,h): 0.050256,0.039573
+  Box area: 472.5 pixels (0.198878% of image)
+Detection #1 (club, conf=0.855439):
+  Box coords (x,y,w,h): 333.4,302.6,38.8,28.5
+  Center point: (352.848709,316.893265)
+  Normalized center: (0.801929,0.586839)
+  Box size ratios (w,h): 0.088185,0.052766
+  Box area: 1105.6 pixels (0.465322% of image)
+
+================= FRAME 126 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.891179):
+  Box coords (x,y,w,h): 240.9,206.5,22.4,21.9
+  Center point: (252.078499,217.431450)
+  Normalized center: (0.572906,0.402651)
+  Box size ratios (w,h): 0.050985,0.040496
+  Box area: 490.6 pixels (0.206469% of image)
+Detection #1 (club, conf=0.876112):
+  Box coords (x,y,w,h): 348.1,326.2,39.9,30.2
+  Center point: (368.073486,341.294769)
+  Normalized center: (0.836531,0.632027)
+  Box size ratios (w,h): 0.090727,0.055886
+  Box area: 1204.7 pixels (0.507034% of image)
+
+================= FRAME 127 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.897800):
+  Box coords (x,y,w,h): 236.4,225.5,23.2,22.4
+  Center point: (248.007080,236.700821)
+  Normalized center: (0.563652,0.438335)
+  Box size ratios (w,h): 0.052678,0.041496
+  Box area: 519.4 pixels (0.218595% of image)
+Detection #1 (club, conf=0.873498):
+  Box coords (x,y,w,h): 365.0,350.5,39.6,30.3
+  Center point: (384.806793,365.650467)
+  Normalized center: (0.874561,0.677130)
+  Box size ratios (w,h): 0.089922,0.056169
+  Box area: 1200.1 pixels (0.505082% of image)
+
+================= FRAME 128 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.895810):
+  Box coords (x,y,w,h): 231.8,245.9,23.7,23.2
+  Center point: (243.620758,257.429985)
+  Normalized center: (0.553684,0.476722)
+  Box size ratios (w,h): 0.053910,0.042876
+  Box area: 549.2 pixels (0.231143% of image)
+Detection #1 (club, conf=0.875972):
+  Box coords (x,y,w,h): 383.1,372.7,40.5,32.6
+  Center point: (403.321976,389.016388)
+  Normalized center: (0.916641,0.720401)
+  Box size ratios (w,h): 0.091939,0.060457
+  Box area: 1320.7 pixels (0.555837% of image)
+
+================= FRAME 129 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 2
+Detection #0 (ball, conf=0.895765):
+  Box coords (x,y,w,h): 226.9,267.1,24.4,24.0
+  Center point: (239.083931,279.134430)
+  Normalized center: (0.543373,0.516916)
+  Box size ratios (w,h): 0.055372,0.044470
+  Box area: 585.1 pixels (0.246237% of image)
+Detection #1 (club, conf=0.823164):
+  Box coords (x,y,w,h): 403.1,394.4,36.2,32.8
+  Center point: (421.214722,410.831467)
+  Normalized center: (0.957306,0.760799)
+  Box size ratios (w,h): 0.082386,0.060768
+  Box area: 1189.5 pixels (0.500646% of image)
+
+================= FRAME 130 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.898825):
+  Box coords (x,y,w,h): 221.2,290.0,25.4,24.7
+  Center point: (233.914543,302.314682)
+  Normalized center: (0.531624,0.559842)
+  Box size ratios (w,h): 0.057816,0.045769
+  Box area: 628.7 pixels (0.264617% of image)
+
+================= FRAME 131 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.900298):
+  Box coords (x,y,w,h): 215.4,314.3,26.3,25.6
+  Center point: (228.523224,327.075058)
+  Normalized center: (0.519371,0.605695)
+  Box size ratios (w,h): 0.059745,0.047365
+  Box area: 672.4 pixels (0.282981% of image)
+
+================= FRAME 132 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.898692):
+  Box coords (x,y,w,h): 208.9,340.1,27.4,26.8
+  Center point: (222.582581,353.493347)
+  Normalized center: (0.505870,0.654617)
+  Box size ratios (w,h): 0.062186,0.049554
+  Box area: 732.2 pixels (0.308158% of image)
+
+================= FRAME 133 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.900693):
+  Box coords (x,y,w,h): 202.1,367.7,28.3,27.9
+  Center point: (216.278992,381.658401)
+  Normalized center: (0.491543,0.706775)
+  Box size ratios (w,h): 0.064308,0.051681
+  Box area: 789.7 pixels (0.332349% of image)
+
+================= FRAME 134 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.900729):
+  Box coords (x,y,w,h): 194.6,397.5,29.3,29.0
+  Center point: (209.304283,412.009445)
+  Normalized center: (0.475692,0.762980)
+  Box size ratios (w,h): 0.066623,0.053707
+  Box area: 850.2 pixels (0.357811% of image)
+
+================= FRAME 135 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.902653):
+  Box coords (x,y,w,h): 186.8,429.5,30.2,30.5
+  Center point: (201.867676,444.683945)
+  Normalized center: (0.458790,0.823489)
+  Box size ratios (w,h): 0.068686,0.056396
+  Box area: 920.4 pixels (0.387362% of image)
+
+================= FRAME 136 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.909676):
+  Box coords (x,y,w,h): 177.8,463.9,31.5,32.1
+  Center point: (193.557556,479.974274)
+  Normalized center: (0.439904,0.888841)
+  Box size ratios (w,h): 0.071525,0.059423
+  Box area: 1009.9 pixels (0.425025% of image)
+
+================= FRAME 137 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+Total detections: 1
+Detection #0 (ball, conf=0.907467):
+  Box coords (x,y,w,h): 168.0,501.7,32.8,33.7
+  Center point: (184.377937,518.547821)
+  Normalized center: (0.419041,0.960274)
+  Box size ratios (w,h): 0.074454,0.062486
+  Box area: 1105.4 pixels (0.465234% of image)
+
+================= FRAME 138 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 139 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 140 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 141 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 142 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 143 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 144 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 145 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 146 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 147 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 148 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 149 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 150 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 151 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 152 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 153 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 154 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 155 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 156 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 157 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 158 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 159 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 160 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 161 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 162 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 163 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 164 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 165 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 166 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 167 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 168 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 169 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 170 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 171 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 172 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 173 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 174 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 175 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 176 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 177 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 178 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 179 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 180 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 181 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 182 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 183 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 184 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 185 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 186 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 187 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 188 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 189 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 190 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 191 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 192 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 193 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 194 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 195 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 196 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 197 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 198 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 199 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 200 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 201 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 202 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 203 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+
+================= FRAME 204 ==================
+Image dimensions: 440x540
+Applied undistortion using maps
+---------------- DETECTION DETAILS ----------------
+No objects detected in this frame
+Video processing complete. Output saved to: i58-output.avi
