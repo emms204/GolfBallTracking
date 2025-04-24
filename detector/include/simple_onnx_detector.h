@@ -48,6 +48,9 @@ private:
     bool calibrationLoaded;      // Flag indicating if calibration is loaded
     bool mapsInitialized;        // Flag indicating if undistortion maps are initialized
     
+    // Frame counter for logging
+    int frameCount;
+    
     /**
      * @brief Initialize undistortion maps for efficient image correction
      * 
@@ -111,10 +114,12 @@ public:
      * @param confidences Output vector for detection confidences
      * @param classIds Output vector for detection class IDs
      * @param applyUndistortion Whether to apply camera undistortion (default: false)
+     * @param enableLogging Whether to log detection details (default: true)
      * @return std::vector<cv::Rect> Detected bounding boxes
      */
     std::vector<cv::Rect> detect(cv::Mat& frame, std::vector<float>& confidences, 
-                               std::vector<int>& classIds, bool applyUndistortion = false);
+                               std::vector<int>& classIds, bool applyUndistortion = false, 
+                               bool enableLogging = true);
     
     /**
      * @brief Get class name from class ID

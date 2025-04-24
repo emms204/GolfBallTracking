@@ -30,6 +30,14 @@ endif()
 set(DETECTOR_INCLUDE_DIRS "${DETECTOR_DIR}/include")
 set(DETECTOR_SRC_DIR "${DETECTOR_DIR}/src")
 
+# Add detector lib directory
+set(DETECTOR_LIB_DIR "${DETECTOR_DIR}/build")
+link_directories(${DETECTOR_LIB_DIR})
+
+# Add common lib directory
+set(COMMON_LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../common/build")
+link_directories(${COMMON_LIB_DIR})
+
 include_directories(
     ${OpenCV_INCLUDE_DIRS} 
     ${ONNXRUNTIME_INCLUDE_DIRS} 
@@ -57,6 +65,30 @@ target_link_libraries(detection_test_app
     ${OpenCV_LIBS} 
     ${ONNXRUNTIME_LIB_DIR}/onnxruntime.lib
     simple_onnx_detector_lib
+    common
+)
+
+# Add stereo_detection_test_app executable
+add_executable(stereo_detection_test_app 
+    stereo_detection_test_app.cpp
+)
+
+# Explicitly add include directories for stereo detection test app
+target_include_directories(stereo_detection_test_app PRIVATE
+    ${OpenCV_INCLUDE_DIRS} 
+    ${ONNXRUNTIME_INCLUDE_DIRS} 
+    ${CALIBRATION_INCLUDE_DIRS}
+    ${DETECTOR_INCLUDE_DIRS}
+    ${CMAKE_CURRENT_SOURCE_DIR}/../common/include
+)
+
+# Link libraries for stereo detection test app
+target_link_libraries(stereo_detection_test_app 
+    ${OpenCV_LIBS}
+    stereo_onnx_detector_lib
+    simple_onnx_detector_lib
+    ${ONNXRUNTIME_LIB_DIR}/onnxruntime.lib
+    common
 )
 
 # Add calibration library if it exists

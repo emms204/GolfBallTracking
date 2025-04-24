@@ -1,4 +1,5 @@
 #include "simple_onnx_detector.h"
+#include "logging.h" // Include logging header
 #include <opencv2/opencv.hpp>
 #include <fstream>
 #include <iostream>
@@ -7,21 +8,9 @@
 #include <chrono>
 #include <onnxruntime_c_api.h>
 
-// Global debug log file stream
-std::ofstream g_debugLogFile;
-
-// Function to log messages to both console and file
-void logMessage(const std::string& message, bool toConsole = true) {
-    if (toConsole) {
-        std::cout << message << std::endl;
-    }
-    if (g_debugLogFile.is_open()) {
-        g_debugLogFile << message << std::endl;
-    }
-}
 
 // Function to get the current time as a string (for logging)
-std::string getCurrentTimeString() {
+inline std::string getCurrentTimeString() {
     auto now = std::chrono::system_clock::now();
     auto nowTime = std::chrono::system_clock::to_time_t(now);
     
@@ -47,14 +36,14 @@ void OnnxDetector::initUndistortMaps(const cv::Size& imageSize) {
         );
         
         mapsInitialized = true;
-        std::cout << "Undistortion maps initialized for image size " 
-                  << imageSize.width << "x" << imageSize.height << std::endl;
+        logMessage("Undistortion maps initialized for image size " 
+                  + std::to_string(imageSize.width) + "x" + std::to_string(imageSize.height));
     }
 }
 
 OnnxDetector::OnnxDetector(const std::string& modelPath, const std::string& classesPath, float confThreshold, float nmsThreshold) 
     : confThreshold(confThreshold), nmsThreshold(nmsThreshold), inputWidth(640), inputHeight(640), 
-      hasBuiltInNms(true), calibrationLoaded(false), mapsInitialized(false) {
+      hasBuiltInNms(true), calibrationLoaded(false), mapsInitialized(false), frameCount(0) {
     
     // Initialize ONNX Runtime
     const OrtApiBase* apiBase = OrtGetApiBase();
@@ -64,7 +53,7 @@ OnnxDetector::OnnxDetector(const std::string& modelPath, const std::string& clas
     OrtStatus* status = ort->GetAllocatorWithDefaultOptions(&allocator);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error getting allocator: " << msg << std::endl;
+        logMessage("Error getting allocator: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         throw std::runtime_error("Failed to get allocator");
     }
@@ -73,7 +62,7 @@ OnnxDetector::OnnxDetector(const std::string& modelPath, const std::string& clas
     status = ort->CreateEnv(ORT_LOGGING_LEVEL_WARNING, "OnnxDetector", &env);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error creating environment: " << msg << std::endl;
+        logMessage("Error creating environment: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         throw std::runtime_error("Failed to create environment");
     }
@@ -82,7 +71,7 @@ OnnxDetector::OnnxDetector(const std::string& modelPath, const std::string& clas
     status = ort->CreateSessionOptions(&sessionOptions);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error creating session options: " << msg << std::endl;
+        logMessage("Error creating session options: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         ort->ReleaseEnv(env);
         throw std::runtime_error("Failed to create session options");
@@ -101,20 +90,20 @@ OnnxDetector::OnnxDetector(const std::string& modelPath, const std::string& clas
 
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error creating session: " << msg << std::endl;
+        logMessage("Error creating session: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         ort->ReleaseSessionOptions(sessionOptions);
         ort->ReleaseEnv(env);
         throw std::runtime_error("Failed to create session");
     }
     
-    std::cout << "Successfully loaded model from: " << modelPath << std::endl;
+    logMessage("Successfully loaded model from: " + modelPath);
     
     // Get input and output names
     size_t numInputNodes;
     status = ort->SessionGetInputCount(session, &numInputNodes);
     if (status != nullptr || numInputNodes != 1) {
-        std::cerr << "Error getting input count or unexpected number of inputs" << std::endl;
+        logMessage("Error getting input count or unexpected number of inputs", true);
         if (status != nullptr) {
             ort->ReleaseStatus(status);
         }
@@ -128,7 +117,7 @@ OnnxDetector::OnnxDetector(const std::string& modelPath, const std::string& clas
     status = ort->SessionGetInputName(session, 0, allocator, &inputNameRaw);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error getting input name: " << msg << std::endl;
+        logMessage("Error getting input name: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         ort->ReleaseSession(session);
         ort->ReleaseSessionOptions(sessionOptions);
@@ -141,7 +130,7 @@ OnnxDetector::OnnxDetector(const std::string& modelPath, const std::string& clas
     size_t numOutputNodes;
     status = ort->SessionGetOutputCount(session, &numOutputNodes);
     if (status != nullptr || numOutputNodes != 1) {
-        std::cerr << "Error getting output count or unexpected number of outputs" << std::endl;
+        logMessage("Error getting output count or unexpected number of outputs", true);
         if (status != nullptr) {
             ort->ReleaseStatus(status);
         }
@@ -155,7 +144,7 @@ OnnxDetector::OnnxDetector(const std::string& modelPath, const std::string& clas
     status = ort->SessionGetOutputName(session, 0, allocator, &outputNameRaw);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error getting output name: " << msg << std::endl;
+        logMessage("Error getting output name: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         ort->ReleaseSession(session);
         ort->ReleaseSessionOptions(sessionOptions);
@@ -165,21 +154,21 @@ OnnxDetector::OnnxDetector(const std::string& modelPath, const std::string& clas
     outputName = outputNameRaw;
     ort->AllocatorFree(allocator, outputNameRaw);
     
-    std::cout << "Model input name: " << inputName << std::endl;
-    std::cout << "Model output name: " << outputName << std::endl;
+    logMessage("Model input name: " + inputName);
+    logMessage("Model output name: " + outputName);
     
     // Load class names
     if (!classesPath.empty()) {
         std::ifstream ifs(classesPath);
         if (!ifs.is_open()) {
-            std::cerr << "Failed to open classes file: " << classesPath << std::endl;
+            logMessage("Failed to open classes file: " + classesPath, true);
             classes.push_back("object"); // Default class
         } else {
             std::string line;
             while (getline(ifs, line)) {
                 classes.push_back(line);
             }
-            std::cout << "Loaded " << classes.size() << " classes from: " << classesPath << std::endl;
+            logMessage("Loaded " + std::to_string(classes.size()) + " classes from: " + classesPath);
         }
     } else {
         classes.push_back("object"); // Default class
@@ -224,7 +213,7 @@ bool OnnxDetector::loadCalibration(const std::string& calibrationFile) {
     try {
         cv::FileStorage fs(calibrationFile, cv::FileStorage::READ);
         if (!fs.isOpened()) {
-            std::cerr << "Error: Could not open calibration file " << calibrationFile << std::endl;
+            logMessage("Error: Could not open calibration file " + calibrationFile, true);
             return false;
         }
         
@@ -238,25 +227,28 @@ bool OnnxDetector::loadCalibration(const std::string& calibrationFile) {
         
         // Check if we got valid data
         if (cameraMatrix.empty() || distCoeffs.empty()) {
-            std::cerr << "Error: Invalid calibration data in file" << std::endl;
+            logMessage("Error: Invalid calibration data in " + calibrationFile, true);
             return false;
         }
         
-        // Reset maps so they'll be regenerated with correct size
+        // Reset undistortion maps (they will be initialized on demand)
+        undistortMap1 = cv::Mat();
+        undistortMap2 = cv::Mat();
         mapsInitialized = false;
         calibrationLoaded = true;
         
-        std::cout << "Camera calibration loaded from: " << calibrationFile << std::endl;
+        logMessage("Calibration loaded successfully from " + calibrationFile);
+        
         return true;
     } catch (const cv::Exception& e) {
-        std::cerr << "Error loading calibration parameters: " << e.what() << std::endl;
+        logMessage("Error loading calibration: " + std::string(e.what()), true);
         return false;
     }
 }
 
 bool OnnxDetector::setCalibration(const cv::Mat& newCameraMatrix, const cv::Mat& newDistCoeffs) {
     if (newCameraMatrix.empty() || newDistCoeffs.empty()) {
-        std::cerr << "Error: Invalid calibration parameters" << std::endl;
+        logMessage("Error: Invalid calibration parameters", true);
         return false;
     }
     
@@ -268,7 +260,7 @@ bool OnnxDetector::setCalibration(const cv::Mat& newCameraMatrix, const cv::Mat&
     mapsInitialized = false;
     calibrationLoaded = true;
     
-    std::cout << "Camera calibration parameters set directly" << std::endl;
+    logMessage("Camera calibration parameters set directly");
     return true;
 }
 
@@ -276,14 +268,26 @@ bool OnnxDetector::hasCalibration() const {
     return calibrationLoaded;
 }
 
-std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& confidences, std::vector<int>& classIds, bool applyUndistortion) {
+std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& confidences, std::vector<int>& classIds, bool applyUndistortion, bool enableLogging) {
     std::vector<cv::Rect> boxes;
     
+    // Increment frame counter
+    frameCount++;
+    
     // Apply undistortion if requested and calibration is available
-    cv::Mat processedFrame = frame;
+    cv::Mat processedFrame = frame.clone();
+
+    // Print image dimensions if logging is enabled
+    if (enableLogging) {
+        logMessage("\n================= FRAME " + std::to_string(frameCount) + " =================");
+        logMessage("Image dimensions: " + std::to_string(frame.cols) + "x" + std::to_string(frame.rows));
+    }
+
     if (applyUndistortion && calibrationLoaded) {
-        std::cout << "Applying camera undistortion..." << std::endl;
         processedFrame = undistortImage(frame);
+        if (enableLogging) {
+            logMessage("Applied undistortion...");
+        }
     }
     
     // Prepare input tensor
@@ -311,7 +315,7 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
     OrtStatus* status = ort->CreateCpuMemoryInfo(OrtArenaAllocator, OrtMemTypeDefault, &memoryInfo);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error creating memory info: " << msg << std::endl;
+        logMessage("Error creating memory info: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         return boxes;
     }
@@ -325,7 +329,7 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
     
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error creating input tensor: " << msg << std::endl;
+        logMessage("Error creating input tensor: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         return boxes;
     }
@@ -341,7 +345,7 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
     
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error running model: " << msg << std::endl;
+        logMessage("Error running model: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         return boxes;
     }
@@ -351,7 +355,7 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
     status = ort->GetTensorMutableData(outputTensor, (void**)&outputData);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error getting output tensor data: " << msg << std::endl;
+        logMessage("Error getting output tensor data: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         ort->ReleaseValue(outputTensor);
         return boxes;
@@ -362,7 +366,7 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
     status = ort->GetTensorTypeAndShape(outputTensor, &outputInfo);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error getting output tensor info: " << msg << std::endl;
+        logMessage("Error getting output tensor info: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         ort->ReleaseValue(outputTensor);
         return boxes;
@@ -372,7 +376,7 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
     status = ort->GetDimensionsCount(outputInfo, &numDims);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error getting dimensions count: " << msg << std::endl;
+        logMessage("Error getting dimensions count: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         ort->ReleaseTensorTypeAndShapeInfo(outputInfo);
         ort->ReleaseValue(outputTensor);
@@ -383,7 +387,7 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
     status = ort->GetDimensions(outputInfo, outputDims.data(), numDims);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error getting dimensions: " << msg << std::endl;
+        logMessage("Error getting dimensions: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         ort->ReleaseTensorTypeAndShapeInfo(outputInfo);
         ort->ReleaseValue(outputTensor);
@@ -394,7 +398,7 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
     status = ort->GetTensorShapeElementCount(outputInfo, &outputSize);
     if (status != nullptr) {
         const char* msg = ort->GetErrorMessage(status);
-        std::cerr << "Error getting tensor shape element count: " << msg << std::endl;
+        logMessage("Error getting tensor shape element count: " + std::string(msg), true);
         ort->ReleaseStatus(status);
         ort->ReleaseTensorTypeAndShapeInfo(outputInfo);
         ort->ReleaseValue(outputTensor);
@@ -403,12 +407,14 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
     
     ort->ReleaseTensorTypeAndShapeInfo(outputInfo);
     
-    // Print output tensor shape for debugging
-    std::cout << "Output shape: ";
-    for (size_t i = 0; i < numDims; i++) {
-        std::cout << outputDims[i] << " ";
+    // Print output tensor shape for debugging if logging is enabled
+    if (enableLogging) {
+        logMessage("Output shape: ");
+        for (size_t i = 0; i < numDims; i++) {
+            logMessage(std::to_string(outputDims[i]) + " ");
+        }
+        logMessage("");
     }
-    std::cout << std::endl;
     
     // Process detection output in the format matching YOLOv8's ONNX export
     // YOLOv8 ONNX output format is typically [batch, num_detections, 6]
@@ -421,20 +427,24 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
         // YOLOv8 format with NMS: [batch, num_detections, 6]
         numDetections = outputDims[1];
         
-        std::cout << "Processing " << numDetections << " detections (YOLOv8 with NMS)" << std::endl;
+        if (enableLogging) {
+            logMessage("Processing " + std::to_string(numDetections) + " detections (YOLOv8 with NMS)");
+        }
         
         // Extract detections from batch 0
         float* batchData = outputData;
         
         // Count valid detections for logging
-        int validDetections = 0;
-        for (int i = 0; i < numDetections; i++) {
-            float confidence = batchData[i * 6 + 4];
-            if (confidence > confThreshold) {
-                validDetections++;
+        if (enableLogging) {
+            int validDetections = 0;
+            for (int i = 0; i < numDetections; i++) {
+                float confidence = batchData[i * 6 + 4];
+                if (confidence > confThreshold) {
+                    validDetections++;
+                }
             }
+            logMessage("Total detections: " + std::to_string(validDetections));
         }
-        std::cout << "Total detections: " << validDetections << std::endl;
         
         // Process each detection
         int detectionCount = 0;
@@ -462,17 +472,19 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
                 float centerXRatio = centerX / processedFrame.cols;
                 float centerYRatio = centerY / processedFrame.rows;
                 
-                // Log detection details
-                std::cout << "Detection #" << detectionCount << " (" << getClassName(classId) 
-                          << ", conf=" << confidence << "):" << std::endl;
-                std::cout << "  Box coords (x,y,w,h): " << x1 << "," << y1 << "," 
-                          << boxWidth << "," << boxHeight << std::endl;
-                std::cout << "  Center point: (" << centerX << "," << centerY << ")" << std::endl;
-                std::cout << "  Normalized center: (" << centerXRatio << "," << centerYRatio << ")" << std::endl;
-                std::cout << "  Box size ratios (w,h): " << widthRatio << "," << heightRatio << std::endl;
-                std::cout << "  Box area: " << (boxWidth * boxHeight) << " pixels (" 
-                          << ((boxWidth * boxHeight * 100.0f) / (processedFrame.cols * processedFrame.rows)) 
-                          << "% of image)" << std::endl;
+                // Log detection details if logging is enabled
+                if (enableLogging) {
+                    logMessage("Detection #" + std::to_string(detectionCount) + " (" + getClassName(classId) 
+                              + ", conf=" + std::to_string(confidence) + "):");
+                    logMessage("  Box coords (x,y,w,h): " + std::to_string(x1) + "," + std::to_string(y1) + "," 
+                              + std::to_string(boxWidth) + "," + std::to_string(boxHeight));
+                    logMessage("  Center point: (" + std::to_string(centerX) + "," + std::to_string(centerY) + ")");
+                    logMessage("  Normalized center: (" + std::to_string(centerXRatio) + "," + std::to_string(centerYRatio) + ")");
+                    logMessage("  Box size ratios (w,h): " + std::to_string(widthRatio) + "," + std::to_string(heightRatio));
+                    logMessage("  Box area: " + std::to_string(boxWidth * boxHeight) + " pixels (" 
+                              + std::to_string((boxWidth * boxHeight * 100.0f) / (processedFrame.cols * processedFrame.rows)) 
+                              + "% of image)");
+                }
                 
                 detectionCount++;
                 
@@ -486,9 +498,11 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
                 int width = int(boxWidth * scaleX);
                 int height = int(boxHeight * scaleY);
                 
-                // Debug the scaled values too
-                std::cout << "SCALED BOX " << i << ": (" << left << "," << top << ","
-                          << width << "," << height << ")" << std::endl;
+                // Debug the scaled values too if logging is enabled
+                if (enableLogging) {
+                    logMessage("SCALED BOX " + std::to_string(i) + ": (" + std::to_string(left) + "," + std::to_string(top) + ","
+                              + std::to_string(width) + "," + std::to_string(height) + ")");
+                }
                 
                 // Add the detection to results
                 boxes.push_back(cv::Rect(left, top, width, height));
@@ -498,25 +512,27 @@ std::vector<cv::Rect> OnnxDetector::detect(cv::Mat& frame, std::vector<float>& c
         }
     }
     else {
-        std::cerr << "Unsupported output format. Expected 3D tensor with shape [batch, detections, 6]" << std::endl;
+        logMessage("Unsupported output format. Expected 3D tensor with shape [batch, detections, 6]");
     }
     
     ort->ReleaseValue(outputTensor);
     
-    // Debug output
-    std::cout << "========== DETECTIONS ==========" << std::endl;
-    std::cout << "Total detections: " << boxes.size() << std::endl;
-    
-    // Print detection details
-    for (size_t i = 0; i < std::min(boxes.size(), size_t(10)); ++i) {
-        std::cout << "Box " << i << ": (" << boxes[i].x << "," << boxes[i].y << "," 
-                  << boxes[i].width << "," << boxes[i].height << "), Class: " 
-                  << classIds[i] << " (" << getClassName(classIds[i]) << "), Conf: " 
-                  << confidences[i] << std::endl;
+    // Debug output if logging is enabled
+    if (enableLogging) {
+        logMessage("========== DETECTIONS ==========");
+        logMessage("Total detections: " + std::to_string(boxes.size()));
+        
+        // Print detection details
+        for (size_t i = 0; i < std::min(boxes.size(), size_t(10)); ++i) {
+            logMessage("Box " + std::to_string(i) + ": (" + std::to_string(boxes[i].x) + "," + std::to_string(boxes[i].y) + "," 
+                      + std::to_string(boxes[i].width) + "," + std::to_string(boxes[i].height) + "), Class: " 
+                      + std::to_string(classIds[i]) + " (" + getClassName(classIds[i]) + "), Conf: " 
+                      + std::to_string(confidences[i]));
+        }
+        if (boxes.size() > 10) logMessage("... (showing first 10 only)");
+        
+        logMessage("Detected " + std::to_string(boxes.size()) + " objects");
     }
-    if (boxes.size() > 10) std::cout << "... (showing first 10 only)" << std::endl;
-    
-    std::cout << "Detected " << boxes.size() << " objects" << std::endl;
     
     return boxes;
 }
@@ -574,12 +590,12 @@ void drawPredictions(cv::Mat& frame, const std::vector<cv::Rect>& boxes,
     }
 }
 
-#ifndef EXCLUDE_MAIN_FUNCTION
+#ifdef INCLUDE_MAIN_FUNCTION
 int main(int argc, char** argv) {
     // Initialize debug log file
     g_debugLogFile.open("debug.log", std::ios::out);
     if (!g_debugLogFile.is_open()) {
-        std::cerr << "Warning: Could not open debug.log for writing" << std::endl;
+        logMessage("Warning: Could not open debug.log for writing");
     }
     
     // Parse command line arguments
@@ -691,8 +707,7 @@ int main(int argc, char** argv) {
             cv::Mat processedFrame = frame.clone();
             
             // Print image dimensions
-            std::string frameHeader = "\n================= FRAME " + std::to_string(frameCount) + " =================";
-            logMessage(frameHeader);
+            logMessage("\n================= FRAME " + std::to_string(frameCount) + " =================");
             logMessage("Image dimensions: " + std::to_string(frame.cols) + "x" + std::to_string(frame.rows));
             
             if (applyUndistortion && calibrationLoaded) {
@@ -705,7 +720,7 @@ int main(int argc, char** argv) {
             std::vector<int> classIds;
             std::vector<cv::Rect> boxes;
             
-            boxes = detector.detect(processedFrame, confidences, classIds, false);
+            boxes = detector.detect(processedFrame, confidences, classIds, false, true);
             
             // Print detailed information about detections and their relationship to image dimensions
             logMessage("---------------- DETECTION DETAILS ----------------");
@@ -799,4 +814,4 @@ int main(int argc, char** argv) {
     }
     return 0;
 }
-#endif // EXCLUDE_MAIN_FUNCTION
+#endif // INCLUDE_MAIN_FUNCTION

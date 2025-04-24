@@ -195,7 +195,7 @@ void Calibrator::assessCalibrationQuality()
         oss << "    View #" << sortedErrors[i].second + 1 << ": " 
             << std::fixed << std::setprecision(3) 
             << sortedErrors[i].first << " pixels" << std::endl;
-}
+    }
 
     // Quality suggestions
     if (mReprojectionError > 1.0) {
@@ -322,6 +322,13 @@ void Calibrator::clearPoints()
     mCalibrated = false;
 }
 
+void Calibrator::setFilteredPoints(const std::vector<std::vector<cv::Point3f>>& objectPoints,
+                                   const std::vector<std::vector<cv::Point2f>>& imagePoints)
+{
+    mObjectPoints = objectPoints;
+    mImagePoints = imagePoints;
+}
+
 cv::Mat Calibrator::getCameraMatrix() const
 {
     return mCameraMatrix;
@@ -372,6 +379,31 @@ bool Calibrator::undistortWithMaps(const cv::Mat& input, cv::Mat& output)
 
     cv::remap(input, output, mMapX, mMapY, cv::INTER_LINEAR);
     return true;
+}
+
+const std::vector<std::vector<cv::Point3f>>& Calibrator::getObjectPoints() const 
+{
+    return mObjectPoints;
+}
+
+const std::vector<std::vector<cv::Point2f>>& Calibrator::getImagePoints() const 
+{
+    return mImagePoints;
+}
+
+cv::Size Calibrator::getBoardSize() const 
+{
+    return mBoardSize;
+}
+
+float Calibrator::getSquareSize() const 
+{
+    return mSquareSize;
+}
+
+cv::Size Calibrator::getImageSize() const 
+{
+    return mImageSize;
 }
 
 } // namespace calibration 

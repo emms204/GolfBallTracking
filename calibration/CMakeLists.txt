@@ -22,6 +22,7 @@ include_directories(${COMMON_INCLUDE_DIR})
 # Calibration library
 add_library(calibration
     src/calibrator.cpp
+    src/stereo_calibrator.cpp
 )
 
 target_include_directories(calibration
@@ -42,6 +43,18 @@ add_executable(calibrate_camera
 )
 
 target_link_libraries(calibrate_camera
+    PRIVATE
+        calibration
+        common
+        ${OpenCV_LIBS}
+)
+
+# Stereo calibration tool executable
+add_executable(stereo_calibration
+    src/stereo_calibration_main.cpp
+)
+
+target_link_libraries(stereo_calibration
     PRIVATE
         calibration
         common

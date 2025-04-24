@@ -78,6 +78,14 @@ public:
     void clearPoints();
 
     /**
+     * @brief Set Filtered Points
+     * @param objectPoints Object points
+     * @param imagePoints Image points
+     */
+    void setFilteredPoints(const std::vector<std::vector<cv::Point3f>>& objectPoints,
+                           const std::vector<std::vector<cv::Point2f>>& imagePoints);
+    
+    /**
      * @brief Get the camera matrix
      * @return Camera intrinsic matrix
      */
@@ -109,6 +117,36 @@ public:
      * @return True if undistortion was applied, false otherwise
      */
     bool undistortWithMaps(const cv::Mat& input, cv::Mat& output);
+
+    /**
+     * @brief Get the object points used for calibration
+     * @return Vector of object point vectors
+     */
+    const std::vector<std::vector<cv::Point3f>>& getObjectPoints() const;
+
+    /**
+     * @brief Get the image points used for calibration
+     * @return Vector of image point vectors
+     */
+    const std::vector<std::vector<cv::Point2f>>& getImagePoints() const;
+
+    /**
+     * @brief Get the board size (chessboard internal corners)
+     * @return Board size
+     */
+    cv::Size getBoardSize() const;
+
+    /**
+     * @brief Get the square size in mm
+     * @return Square size
+     */
+    float getSquareSize() const;
+
+    /**
+     * @brief Get the image size used for calibration
+     * @return Image size
+     */
+    cv::Size getImageSize() const;
 
 private:
     /**

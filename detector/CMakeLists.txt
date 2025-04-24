@@ -44,7 +44,9 @@ include_directories(
 )
 
 # Add library for simple_onnx_detector without main function
-add_library(simple_onnx_detector_lib STATIC src/simple_onnx_detector.cpp)
+add_library(simple_onnx_detector_lib STATIC 
+    src/simple_onnx_detector.cpp
+    src/logging.cpp)
 target_compile_definitions(simple_onnx_detector_lib PRIVATE EXCLUDE_MAIN_FUNCTION)
 target_include_directories(simple_onnx_detector_lib
     PRIVATE
@@ -60,6 +62,7 @@ target_link_libraries(simple_onnx_detector_lib
 
 # Also keep the original executable for standalone use
 add_executable(simple_onnx_detector src/simple_onnx_detector.cpp)
+target_compile_definitions(simple_onnx_detector PRIVATE INCLUDE_MAIN_FUNCTION)
 target_include_directories(simple_onnx_detector
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -70,6 +73,23 @@ target_link_libraries(simple_onnx_detector
     PRIVATE
         ${OpenCV_LIBS}
         ${ONNXRUNTIME_LIB}  # Direct library path instead of target name
+        simple_onnx_detector_lib
+)
+
+# Add library for stereo_onnx_detector without main function
+add_library(stereo_onnx_detector_lib STATIC src/stereo_onnx_detector.cpp)
+target_compile_definitions(stereo_onnx_detector_lib PRIVATE EXCLUDE_MAIN_FUNCTION)
+target_include_directories(stereo_onnx_detector_lib
+    PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${OpenCV_INCLUDE_DIRS}
+        ${ONNXRUNTIME_INCLUDE_DIRS}
+)
+target_link_libraries(stereo_onnx_detector_lib 
+    PRIVATE
+        ${OpenCV_LIBS}
+        ${ONNXRUNTIME_LIB}  # Direct library path instead of target name
+        simple_onnx_detector_lib
 )
 
 # Print information during build
